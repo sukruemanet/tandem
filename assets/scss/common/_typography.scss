@@ -1,0 +1,153 @@
+﻿
+@import "../base/_base";
+
+/*#region Fonts */
+$font-maison: 'Maison Neue', sans-serif;
+$font-mono: 'Maison Neue Mono', sans-serif;
+$font-bold-italic: italic;
+$font-normal: normal;
+$font-medium: 500;
+$font-bold: bold;
+
+/*#region Device Resolution */
+$desktop: 1920px;
+$desktop-sm: 1368px;
+$tablet-h: 1024px;
+$tablet-v: 768px;
+$phone: 648px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+small {
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-medium;
+}
+
+.small-head {
+    font-size: 1.2rem;
+    letter-spacing: 3.27273px;
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    white-space: nowrap;
+}
+
+.card-caption {
+    padding: 8rem 10vw 8rem 4rem;
+    margin-right: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media only screen and (max-width: $tablet-v) {
+        padding: 2rem;
+        margin: 0;
+      }
+
+    h4 {
+        margin: 6rem 0;
+
+        @media only screen and (max-width: $desktop-sm) {
+            margin: 2rem 0;
+          }
+    }
+
+    span {
+        font-size: clamp(2.6rem, 12vw, 4.4rem);
+        letter-spacing: 0.206085px;
+        margin-bottom: 8rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            font-size: clamp(2.4rem, 12vw, 3.2rem);
+          }
+
+          @media only screen and (max-width: $tablet-h) {
+            font-size: clamp(2rem, 12vw, 2rem);
+            margin-bottom: 4rem;
+          }
+    }
+
+    p {
+        font-family: $font-mono;
+        font-size: clamp(1.6rem, 12vw, 2rem);
+        letter-spacing: 0.206085px;
+        margin-bottom: 8rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            font-size: clamp(1.4rem, 12vw, 1.6rem);
+          }
+
+          @media only screen and (max-width: $tablet-v) {
+            margin-bottom: 4rem;
+          }
+    }
+}
+
+h1 {
+    font-size: clamp(5rem, 12vw, 7rem);
+    letter-spacing: 0.6291px;
+    font-weight: $font-medium;
+    line-height: 1;
+
+    @media only screen and (max-width: $desktop-sm) {
+        font-size: clamp(3rem, 12vw, 4rem);
+      }
+
+      @media only screen and (max-width: $tablet-h) {
+        font-size: clamp(3rem, 12vw, 3.6rem);
+      }
+}
+
+h2 {
+    font-size: clamp(5rem, 12vw, 7rem);
+    letter-spacing: 0.6291px;
+    font-weight: $font-medium;
+
+    @media only screen and (max-width: $desktop) {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+        font-size: clamp(3rem, 12vw, 3.6rem);
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+        font-size: clamp(2rem, 12vw, 2.8rem);
+    }
+}
+
+h3 {
+    font-size: clamp(4rem, 12vw, 5.8rem);
+    letter-spacing: 0.6291px;
+    font-weight: $font-medium;
+
+    @media only screen and (max-width: $tablet-h) {
+        font-size: clamp(3rem, 12vw, 3.6rem);
+      }
+}
+
+h4 {
+    font-size: clamp(4rem, 12vw, 5.8rem);
+    letter-spacing: 0.6291px;
+
+
+    @media only screen and (max-width: $tablet-h) {
+        font-size: clamp(3.4rem, 12vw, 4rem);
+     }
+
+     
+     @media only screen and (max-width: $tablet-v) {
+        font-size: clamp(2.4rem, 12vw, 3rem);
+      }
+}
+
+

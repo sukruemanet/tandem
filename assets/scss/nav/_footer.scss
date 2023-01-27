@@ -1,0 +1,181 @@
+﻿
+@import "../base/base";
+
+footer {
+    background: #D5E8EC;
+
+    .items {
+        display: flex;
+        border-top:solid $black .1rem;
+        border-bottom:solid $black .1rem;
+
+        @media only screen and (max-width: $tablet-h) {
+          flex-direction: column-reverse;            
+           }
+
+        .item {
+            flex: 1;
+            display: flex;
+            padding: 4rem;
+            flex-direction: column;
+
+            @media only screen and (max-width: $tablet-h) {
+                padding: 2rem;
+       
+                 }
+
+            &:first-child {
+                justify-content: center;
+                align-items: center;
+
+                @media only screen and (max-width: $tablet-h) {
+                    justify-content: flex-start;
+                    align-items: flex-start;         
+                     }
+            }
+
+            &:last-child {
+                align-items: center;
+                @media only screen and (max-width: $tablet-h) {
+                    justify-content: flex-start;
+                    align-items: flex-start;         
+                     }
+            }
+
+            &:nth-child(2) {
+                border-left:solid $black .1rem;
+                border-right:solid $black .1rem;
+            }
+
+            .logo {
+                max-width: 18rem;
+
+                @media only screen and (max-width: $tablet-h) {
+                    max-width: 10rem;
+                     }
+            }
+
+            small {
+                font-size: 1.1rem;
+                letter-spacing: 3px;
+                font-weight: $font-bold;
+            }
+
+            .social {
+                margin: 2rem 0 4rem;
+                display: flex;
+
+                i {
+                    width: 5rem;
+                    height: 5rem;
+                    background: #474747;
+                    border-radius: 100%;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1rem;
+
+                    svg {
+                        fill: #A5C9D0;
+                    }
+                }
+            }
+
+            .contact {
+                margin: 2rem 0 4rem;
+                @media only screen and (max-width: $tablet-h) {
+                    margin: 2rem 0 6rem;    
+                }
+                span {
+                    font-size: 1.6rem;
+                    font-family: $font-mono;
+                    color: $dark;
+                    letter-spacing: 0.39043px;
+
+                    a {
+                        color: $dark;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .newsletter {
+                display: flex;
+                flex-direction: column;
+                
+                span {
+                    font-size: 1.2rem;
+                    color: $dark;
+                    font-family: $font-mono;
+                    letter-spacing: 0.130159px;
+                    margin-bottom: 1rem;
+                }
+
+                form {
+                    margin: 0;
+
+                    .form-item {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            nav {
+          
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 9rem;
+                    @media only screen and (max-width: $tablet-h) {
+                        margin-top: 4rem;      
+                    }
+                    li {
+                        a {
+                            font-size: clamp(3rem, 12vw, 3.8rem);
+                            line-height: 1.2;
+                            color: $dark;
+                            font-weight: $font-medium;
+
+                            @media only screen and (max-width: $tablet-h) {
+                                font-size: clamp(1.8rem, 12vw, 2.2rem);       
+                            }
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }  
+        }
+    }
+
+    .buttom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        height: 10rem;
+        padding: 0 2rem;
+
+        @media only screen and (max-width: $tablet-h) {
+            height: 4rem;
+        }
+
+        span {
+            font-size: 1.4rem;
+            @media only screen and (max-width: $tablet-h) {
+                font-size: 1.2rem;    
+            }
+            a {
+                color: $dark;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

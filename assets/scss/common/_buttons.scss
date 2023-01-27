@@ -1,0 +1,85 @@
+﻿
+@import "../base/base";
+
+.button, button {
+    width: fit-content;
+    height: 5rem;
+    padding: 0 4rem;
+    border-radius: 100vmax;
+    font-size: 1.2rem;
+    letter-spacing: 2.18182px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    @include fade-transition;
+    letter-spacing: 2.18182px;
+
+    &:hover {
+        @include fade-transition;
+
+        &.border {
+            &.light {
+                background: $white;
+                color: $dark;
+            }
+
+            &.dark {
+                background: $dark;
+                color: $white;
+            }
+        }
+
+        &.normal {
+            border: solid $dark .1rem;
+            &.dark {
+                background: $white;
+                color: $dark;
+    
+                svg {
+                    fill: $dark;
+                @include fade-transition;
+
+                }
+            }
+        }
+    }
+
+    &.border {
+        &.light {
+            border:solid $white .1rem;
+            color: $white;
+        }
+
+        &.dark {
+            border:solid $dark .1rem;
+            color: $dark;
+        }
+    }
+
+    &.normal {
+        border: solid transparent .1rem;
+        &.dark {
+            background: $dark;
+            color: $white;
+
+            svg {
+                fill: $white;
+                margin-right: 1rem;
+                @include fade-transition;
+            }
+        }
+    }
+}
+
+button {
+    background: #C9FF99;
+    width: -webkit-fill-available;
+
+    &:hover {
+        background: $white;
+    }
+}
