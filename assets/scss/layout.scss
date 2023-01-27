@@ -39,6 +39,7 @@ img {
 body {
     overflow-x: hidden;
     overflow-y: auto;
+    background: $black;
 
     &.no-scroll {
         position: fixed;
