@@ -31,6 +31,8 @@ figure {
     }
 
     &.image-parallax {
+        overflow: hidden;
+
         img {
             position: absolute;
             width: 100%;
@@ -108,6 +110,149 @@ figure {
             i {
                 margin-top: 10rem;
             }
+        }
+    }
+}
+
+.card-caption {
+    padding: 10vw 0;
+
+    &.padding {
+        padding: 10vw 0 10vw 10rem;
+    }
+
+    .items {
+        display: flex;
+
+        .item {
+            width: 50%;
+
+            &:first-child {
+                padding-right: 10vw;
+            }
+
+            span {
+                font-size: clamp(5rem, 12vw, 7rem);
+                font-weight: 700;
+                color: $white;
+                line-height: 1.1;
+                display: flex;
+            }
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    border-bottom: solid $white .1rem;
+                    display: flex;
+                    align-items: center;
+                    height: 8rem;
+                    
+
+                    span {
+                        font-size: 1.8rem;
+
+                        &:first-child {
+                            margin-right: 6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .text-large {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: clamp(14rem, 12vw, 20rem);
+        color: $white;
+        font-weight: $font-bold;
+        letter-spacing: -2px;
+        line-height: 1;
+        margin-top:20rem;
+
+        mark {
+            background: none;
+            color: $white;
+            text-indent: 10vw;
+        }
+    }
+}
+
+.innovations {
+    padding: 5vw 10rem;
+    border-top: solid $white .1rem;
+    border-bottom: solid $white .1rem;
+    color: $white;
+    display: flex;
+
+    .item {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        font-size: clamp(5rem, 12vw, 9rem);
+        font-weight: $font-bold;
+        letter-spacing: -4px;
+        line-height: 1;
+    }
+
+    .list {
+        li {
+            border: solid $white .1rem;
+            display: flex;
+            font-size: clamp(3rem, 12vw, 3.6rem);
+            font-weight: $font-bold;
+            padding: 5rem;
+            margin-bottom: 4rem;
+
+            i {
+                margin-right: 4rem;
+            }
+        }
+    }
+}
+
+.image-card {
+    display: flex;
+    min-height: 90vh;
+    padding: 5vw 0;
+
+    .item {
+        width: 50%;
+    }
+
+    p {
+        max-width: 70%;
+        font-size: clamp(3rem, 12vw, 4.6rem);
+        font-weight: $font-bold;
+        letter-spacing: -1px;
+        line-height: 1.4;
+        color: $white;
+        padding-left: 5vw;
+
+        mark {
+            background: none;
+            color: #999999
+        }
+    }
+
+    span {
+        max-width: 80%;
+        font-size: clamp(1.6rem, 12vw, 2.2rem);
+        color: $white;
+        padding-left: 5vw;
+        display: block;
+        margin-top: 6rem;
+
+        strong {
+            font-weight: $font-bold;
         }
     }
 }
