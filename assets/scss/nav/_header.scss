@@ -4,50 +4,25 @@
 header {
   position: fixed;
   width: 100%;
-  top: 1rem;
+  height: 14rem;
+  top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 5;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   @include fade-transition;
-  padding: 0 2rem;
 
-  @media only screen and (max-width: $tablet-v) {
-    padding: 0;
-    top: .5rem;
-  }
+  .logo {
+    width: 18rem;
+    height: 7rem;
+    display: flex;
+    background: url(../../assets/images/main/logo.svg) no-repeat center;
+    background-size: 18rem;
 
-  &.dark {
-    nav {
-      border-bottom: solid rgba($dark, .3) .1rem;
-
-      .menu-button {
-        #hamburger-menu {
-          span {
-            background: $dark;
-
-          }
-        }
-      }
-    }
-
-    ul {
-
-      li {
-        a {
-          color: $dark;
-        }
-      }
-    }
-
-    .right {
-      i {
-        svg {
-          fill: $dark;
-        }
-      }
-    }
-
-    .logo {
-      background: url(../../assets/images/main/logo-dark.svg) no-repeat;
+    @media only screen and (max-width: $tablet-v) {
+      background-size: 13rem;
     }
   }
 
@@ -56,48 +31,35 @@ header {
   }
 
   nav {
-    width: 100%;
-    border-bottom: solid rgba($white, .3) .1rem;
-    height: 10rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    @include fade-transition;
 
-    @media only screen and (max-width: $tablet-v) {
-      height: 8rem;
-    }
-  }
-
-  ul {
-    display: flex;
-    width: 30rem;
-
-    @media only screen and (max-width: $tablet-v) {
-      display: none;  
-    }
-
-    li {
-      a {
-        font-size: clamp(1.4rem, 12vw, 1.6rem);
-        font-weight: $font-bold;
-        color: $white;
-        margin-right: 3rem;
-        text-transform: uppercase;
-        letter-spacing: 3.27273px;
+    ul {
+      display: flex;
+  
+      @media only screen and (max-width: $tablet-v) {
+        display: none;  
+      }
+  
+      li {
+        a {
+          font-size: clamp(1.8rem, 12vw, 2rem);
+          font-weight: $font-medium;
+          color: $white;
+          margin-right: 5rem;
+        }
       }
     }
-  }
-
-  .logo {
-    width: 18rem;
-    height: 7rem;
-    background: url(../../assets/images/main/logo-light.svg) no-repeat center;
-    background-size: 18rem;
-
-    @media only screen and (max-width: $tablet-v) {
-      background-size: 13rem;
+  
+    .search-button {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 100%;
+      border:solid $white .2rem;
     }
   }
 
@@ -143,110 +105,6 @@ header {
     }
   }
 
-  .right {
-    width: 30rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    i {
-      cursor: pointer;
-      margin: 0 1.8rem;
-
-      &:last-child {
-        margin: 0 0 0 1.8rem;
-
-        @media only screen and (max-width: $tablet-v) {
-          margin: 0 0 0 .5rem;
-        }
-      }
-
-      @media only screen and (max-width: $tablet-v) {
-        margin: 0 .8rem;
-      }
-
-      .mobile-menu {
-        height: 3rem;
-        display: flex;
-        align-items: center;
-      }
-
-      svg {
-        fill: $white;
-
-        @media only screen and (max-width: $tablet-v) {
-          width: 2.2rem;
-          height: 2.2rem;
-        }
-      }
-
-      &.filter-button {
-        svg {
-          fill: transparent;
-          stroke: $white;
-        }
-      }
-    }
-  }
-
-  .menu-button {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    #hamburger-menu {
-      width: 3.4rem;
-      height: 1.4rem;
-      position: relative;
-
-      span {
-        opacity: 1;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: .2rem;
-        border-radius: 10px;
-        background: $white;
-        position: absolute;
-        transform: rotate(0deg);
-        transition: .4s ease-in-out;
-
-        &:nth-child(1) {
-          top: 0;
-        }
-
-        &:nth-child(2) {
-          top: 1rem;
-        }
-      }
-
-      &.open span {
-        &:nth-child(1) {
-          transform: translateY(5px) rotate(135deg);
-        }
-
-        &:nth-child(2) {
-          transform: translateY(-5px) rotate(-135deg);
-        }
-      }
-    }
-  }
-
-  .menu-close {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    cursor: pointer;
-    display: none;
-
-    &.visible {
-      z-index: 99999;
-      display: flex;
-    }
-  }
 }
 
 

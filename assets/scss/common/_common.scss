@@ -78,4 +78,36 @@ figure {
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    figure {
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .caption {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        padding: 10rem;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-size: clamp(8rem, 12vw, 12rem);
+            letter-spacing: -3.41667px;
+            font-weight: $font-bold;
+            line-height: 1;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10rem;
+
+            i {
+                margin-top: 10rem;
+            }
+        }
+    }
 }
