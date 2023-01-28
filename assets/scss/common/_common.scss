@@ -85,27 +85,52 @@ figure {
         display: flex;
         align-items: flex-end;
     }
+
+    .reveal {
+        visibility: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        // left:25vw
+    }
     
     .caption {
         width: 100%;
-        position: relative;
+        position: absolute;
+        bottom: 0;
         z-index: 2;
         padding: 10rem;
         color: $white;
         display: flex;
         flex-direction: column;
 
-        span {
-            font-size: clamp(8rem, 12vw, 12rem);
-            letter-spacing: -3.41667px;
-            font-weight: $font-bold;
-            line-height: 1;
+        .text-reveal {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: clamp(8rem, 12vw, 12rem);
+                letter-spacing: -3.41667px;
+                font-weight: $font-bold;
+                line-height: 1;
+                transform: translateY(100%);
+                background-color:transparent;
+          
+            }
         }
 
         .bottom {
             display: flex;
             justify-content: space-between;
             margin-top: 10rem;
+
+            .button {
+                
+            }
+
 
             i {
                 margin-top: 10rem;
@@ -126,6 +151,7 @@ figure {
 
         .item {
             width: 50%;
+            overflow: hidden;
 
             &:first-child {
                 padding-right: 10vw;
@@ -159,6 +185,12 @@ figure {
                         }
                     }
                 }
+            }
+
+            .reveal {
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 4rem;
             }
         }
     }
