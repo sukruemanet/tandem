@@ -16,10 +16,10 @@ var swiper = new Swiper(".carousel-news-swiper", {
       slidesPerView: 2.2,
     },
     1024: {
-      slidesPerView: 2.8,
+      slidesPerView: 4,
     },
     1920: {
-      slidesPerView: 3.8,
+      slidesPerView: 5,
     },
     2560: {
       slidesPerView: 5,
