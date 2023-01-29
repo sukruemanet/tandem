@@ -2,12 +2,12 @@
 @import "../base/base";
 
 footer {
-    background: #D5E8EC;
-
+    padding-bottom: 4rem;
     .items {
         display: flex;
-        border-top:solid $black .1rem;
-        border-bottom:solid $black .1rem;
+        border-top:solid $white .1rem;
+        border-bottom:solid $white .1rem;
+  
 
         @media only screen and (max-width: $tablet-h) {
           flex-direction: column-reverse;            
@@ -25,9 +25,6 @@ footer {
                  }
 
             &:first-child {
-                justify-content: center;
-                align-items: center;
-
                 @media only screen and (max-width: $tablet-h) {
                     justify-content: flex-start;
                     align-items: flex-start;         
@@ -35,16 +32,14 @@ footer {
             }
 
             &:last-child {
-                align-items: center;
-                @media only screen and (max-width: $tablet-h) {
-                    justify-content: flex-start;
-                    align-items: flex-start;         
-                     }
+                justify-content: flex-start;
+                align-items: flex-start;  
             }
 
             &:nth-child(2) {
-                border-left:solid $black .1rem;
-                border-right:solid $black .1rem;
+                border-left:solid $white .1rem;
+                border-right:solid $white .1rem;
+                justify-content: space-between;
             }
 
             .logo {
@@ -55,12 +50,6 @@ footer {
                      }
             }
 
-            small {
-                font-size: 1.1rem;
-                letter-spacing: 3px;
-                font-weight: $font-bold;
-            }
-
             .social {
                 margin: 2rem 0 4rem;
                 display: flex;
@@ -68,7 +57,7 @@ footer {
                 i {
                     width: 5rem;
                     height: 5rem;
-                    background: #474747;
+                    background: $white;
                     border-radius: 100%;
                     display:flex;
                     justify-content: center;
@@ -76,7 +65,7 @@ footer {
                     margin-right: 1rem;
 
                     svg {
-                        fill: #A5C9D0;
+                        fill:$black;
                     }
                 }
             }
@@ -104,16 +93,8 @@ footer {
 
             .newsletter {
                 display: flex;
-                flex-direction: column;
+                margin-bottom: 10rem;
                 
-                span {
-                    font-size: 1.2rem;
-                    color: $dark;
-                    font-family: $font-mono;
-                    letter-spacing: 0.130159px;
-                    margin-bottom: 1rem;
-                }
-
                 form {
                     margin: 0;
 
@@ -128,15 +109,14 @@ footer {
                 ul {
                     display: flex;
                     flex-direction: column;
-                    margin-top: 9rem;
-                    @media only screen and (max-width: $tablet-h) {
-                        margin-top: 4rem;      
-                    }
+         
+   
                     li {
+                        margin-bottom: 2rem;
                         a {
                             font-size: clamp(3rem, 12vw, 3.8rem);
                             line-height: 1.2;
-                            color: $dark;
+                            color: $white;
                             font-weight: $font-medium;
 
                             @media only screen and (max-width: $tablet-h) {
@@ -153,29 +133,84 @@ footer {
         }
     }
 
-    .buttom {
+    small {
+        font-size: 1.6rem;
+        color: $white;
+        margin-bottom: 2rem;
+        font-weight: $font-medium;
+    }
+
+    span {
+        font-size: 1.6rem;
+        color: $white;
+        font-weight: $font-medium;
+    }
+
+    .links {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: center;
-        height: 10rem;
-        padding: 0 2rem;
+        margin-top: 4rem;
 
         @media only screen and (max-width: $tablet-h) {
-            height: 4rem;
+            margin-top: 4rem;      
         }
 
-        span {
-            font-size: 1.4rem;
-            @media only screen and (max-width: $tablet-h) {
-                font-size: 1.2rem;    
-            }
+        li {
+            margin-right: 2rem;
             a {
-                color: $dark;
+                font-size: clamp(1.2rem, 12vw, 1.6rem);
+                line-height: 1.2;
+                color: $white;
+                font-weight: $font-medium;
+
                 &:hover {
                     text-decoration: underline;
                 }
             }
+        }
+    }
+
+    .address {
+        margin-top: 4rem;
+        font-size: 2.6rem;
+        color: $white;
+        font-weight: $font-bold;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $white;
+        }
+    }
+
+    a {
+        color: $white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .copyright {
+        margin-top: 2rem;
+    }
+
+    p {
+        font-size: 2.6rem;
+        color: $white;
+        font-weight: $font-bold;
+    }
+
+    .form-item {
+        flex-direction: row !important;
+        border: solid $white .1rem;
+
+        input {
+            border: none;
+        }
+
+        button {
+            padding: 0 2rem;
+            background: none;
         }
     }
 }

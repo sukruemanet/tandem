@@ -70,6 +70,10 @@ figure {
             font-weight: $font-bold;
             letter-spacing: -2px;
             line-height: 1;
+
+            @media only screen and (max-width: $desktop) {
+                font-size: clamp(12rem, 12vw, 14rem);
+            }
         }
     }
 }
@@ -142,8 +146,10 @@ figure {
                 font-weight: $font-bold;
                 line-height: 1;
                 transform: translateY(100%);
-                background-color:transparent;
-          
+      
+                @media only screen and (max-width: $desktop) {
+                    font-size: clamp(7rem, 12vw, 10rem);
+                }
             }
         }
 
@@ -152,13 +158,16 @@ figure {
             justify-content: space-between;
             margin-top: 10rem;
 
-            .button {
-                
+            @media only screen and (max-width: $desktop) {
+                margin-top: 4rem;
             }
-
 
             i {
                 margin-top: 10rem;
+
+                @media only screen and (max-width: $desktop) {
+                    margin-top: 4rem;
+                }
             }
         }
     }
@@ -188,6 +197,10 @@ figure {
                 color: $white;
                 line-height: 1.1;
                 display: flex;
+    
+                @media only screen and (max-width: $desktop) {
+                    font-size: clamp(3.8rem, 12vw, 4.6rem);
+                }
             }
 
             ul {
@@ -282,6 +295,11 @@ figure {
         line-height: 1.4;
         color: $white;
 
+        @media only screen and (max-width: $desktop) {
+            font-size: clamp(2.8rem, 12vw, 3.2rem);
+            max-width: 85%;
+        }
+
         mark {
             background: none;
             color: #999999
@@ -319,3 +337,324 @@ figure {
         object-fit: cover;
     }
 }
+
+.faq {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20rem 10rem;
+
+    @media only screen and (max-width: $tablet-v) {
+       max-width: 100%;
+       padding:6em 5vw;
+     }
+
+    small {
+        width: 40rem;
+        font-size: clamp(1rem, 12vw, 1.6rem);
+        font-weight: $font-medium;
+        color: $white;
+    }
+
+    h6 {
+        font-size: clamp(6rem, 12vw, 9rem);
+        letter-spacing: -3.41667px;
+        font-weight: $font-bold;
+        color: $white;
+        line-height: 1;
+        margin-bottom: 6rem;
+    }
+
+    
+    .link {
+        background: #e2ecea;;
+        border: solid $white .1rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        width: 100%;
+        height: 10.6rem;
+        display: flex;
+        align-items: center;
+        padding-left: 4rem;
+        letter-spacing: -1.2375px;
+        font-size: 2.2rem;
+        font-weight: $font-medium;
+        color: $dark;
+        @include fade-transition;
+
+        @media only screen and (max-width: $tablet-v) {
+            padding-left: 2rem;
+            font-size: 1.8rem;
+         }
+
+        svg {
+            margin-left: 3rem;
+        @include fade-transition;
+
+        }
+        &:hover {
+            svg {
+                margin-left: 4rem;
+                @include fade-transition;
+            }
+        }
+    }
+
+    .faq-content {
+        width: 70%;
+    }
+
+    .accordion-menu {
+        width: 100%;
+    
+        li {
+            border: solid $white .1rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+    
+            &.open {
+    
+                .dropdownlink {
+                    i {
+                        .icon-open {
+                            display: none;
+                        }
+    
+                        .icon-close {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .dropdownlink {
+            cursor: pointer;
+            display: flex;
+            font-size: clamp(3rem, 6vw, 3.4rem);
+            color: $white;
+            font-weight: $font-bold;
+            position: relative;
+            transition: all 0.4s ease-out;
+            min-height: 9rem;
+            align-items: center;
+            padding: 4rem 6rem 4rem 4rem;
+    
+            @media only screen and (max-width: $tablet-v) {
+                padding: 2rem 6rem 2rem 2rem;
+                font-size: clamp(1.4rem, 6vw, 1.7rem);
+              }
+    
+            i {
+                position: absolute;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                right: 4rem;
+                font-size: 1.8rem;
+    
+                @media only screen and (max-width: $tablet-v) {
+                    right: 1rem;
+                  }
+        
+                svg {
+                    @media only screen and (max-width: $tablet-h) {
+                        width: 3.2rem;
+                        height: 3.2rem;
+                    }
+                }
+    
+                .icon-open {
+                    display: flex;
+                }
+    
+                .icon-close {
+                    display: none;
+                }
+            }
+        }
+    
+        .ion-ios-arrow-down {
+            right: 2rem;
+            left: auto;
+        }
+    
+    }
+    
+    .submenuItems {
+        display: none;
+    
+        li {
+            padding: 1rem 4rem 4rem;
+            position: relative;
+            border: none;
+            margin: 0;
+            @media only screen and (max-width: $tablet-h) {
+                padding: 1rem 2rem 2rem;
+            }
+        }
+    
+        p {
+            font-size: clamp(1.4rem, 6vw, 1.8rem);
+            color: $white;
+            font-weight: $font-normal;
+            line-height: 2.2rem;
+            margin-right: 1.4rem;
+    
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(1.4rem, 6vw, 1.6rem);
+            }
+    
+            strong {
+                font-weight: $font-medium;
+            }
+        }
+    }
+}
+
+.join-us {
+    width: 100%;
+    height: 100vh;
+
+    .caption {
+        position: absolute;
+        width: 60rem;
+        top: 0;
+        left: 0;
+        padding: 10rem;
+    }
+
+    p {
+        font-size: clamp(3.8rem, 12vw, 5.2rem);
+        letter-spacing: 0.6291px;
+        font-weight: $font-normal;
+        line-height: 1;
+        color: $white;
+
+        @media only screen and (max-width: $desktop) {
+            font-size: clamp(3rem, 12vw, 4rem);
+        }
+    }
+
+    span {
+        max-width: 110rem;
+        display: block;
+        font-size: clamp(3.2rem, 12vw, 4rem);
+        letter-spacing: 0.6291px;
+        font-weight: $font-medium;
+        line-height: 1.2;
+        color: $white;
+
+        @media only screen and (max-width: $desktop) {
+            font-size: clamp(3rem, 12vw, 3.4rem);
+        }
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
+    h5 {
+        font-size: clamp(30rem, 12vw, 40rem);
+        letter-spacing: 0.6291px;
+        font-weight: $font-bold;
+
+        color: $white;
+        letter-spacing: -14px;
+    }
+
+    .bottom {
+        position: absolute;
+        width: 100%;
+        bottom: -10rem;
+        left: 0;
+        padding: 10rem 10rem 0;
+        justify-content: flex-end;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.news {
+    padding: 20rem 10rem;
+
+    .content {
+        width: 100%;
+        min-height: 40rem;
+        border: solid $white .1rem;
+        display: flex;
+        flex-direction: column;
+
+        .head {
+            height: 14rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.2rem;
+            color: $white;
+            border-bottom: solid $white .1rem;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+        
+            .info {
+                border-right: solid $white .1rem;
+                padding: 10rem;
+                width: 100%;
+
+                .top {
+                    color: $white;
+
+                    span {
+                        font-size: 1.6rem;
+                        margin-right: 4rem;
+                    }
+                }
+
+                .caption {
+                    span {
+                        font-size: 3.2rem;
+                        color: $white;
+                        font-weight: $font-bold;
+                        margin: 4rem 0;
+                        display: flex;
+                    }
+
+                    a {
+                        font-size: 1.8rem;
+                        color: $white;
+                        text-decoration: underline;
+
+                        svg {
+                            margin-left: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .all-news {
+            width: 25rem;
+            font-size: 2rem;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include fade-transition;
+            
+            &:hover {
+                background: $white;
+                color: $black;
+                @include fade-transition;
+            }
+        }
+    }
+}
+
+

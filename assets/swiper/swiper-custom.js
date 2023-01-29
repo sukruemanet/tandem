@@ -26,3 +26,16 @@ var swiper = new Swiper(".carousel-news-swiper", {
     },
   }
 });
+
+//Carousel New
+var swiper = new Swiper(".index-swiper", {
+  spaceBetween: 0,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    clickable: true,
+  },
+});

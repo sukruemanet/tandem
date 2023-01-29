@@ -73,8 +73,10 @@
 }
 
 button {
-    background: #C9FF99;
-    width: -webkit-fill-available;
+    svg {
+        fill: $white;
+        stroke: $white;
+    }
 
     &:hover {
         background: $white;
