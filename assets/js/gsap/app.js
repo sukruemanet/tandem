@@ -47,7 +47,10 @@ revealContainers.forEach((imagereval) => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: imagereval,
-      toggleActions: "restart none none reset"
+      // toggleActions: "restart none none reset",
+      toggleActions: "play none none none",
+      // markers:true,
+      start: "-10% 60%",
     }
   });
 
@@ -65,13 +68,39 @@ revealContainers.forEach((imagereval) => {
   });
 });
 
-gsap.to('span', { delay:.5, duration: 0.8, y:"0%", stagger: 0.6, })
+gsap.to('.start span', { delay:.5, duration: 0.8, y:"0%", stagger: 0.6, })
 
 
-TweenMax.staggerFrom(".bottom", 2, {
+TweenMax.staggerFrom(".start .bottom", 2, {
   delay: 1,
   stagger: 0.6,
   opacity: 0,
   x: -10,
   ease: Expo.easeInOut
+});
+
+const fadeInAnimated = gsap.utils.toArray('.fadeslideup');
+fadeInAnimated.forEach((box, i) => {
+  const anim = gsap.fromTo(box, { autoAlpha: 0, y: 150 }, { duration: 1.5, autoAlpha: 1, y: 0 });
+  ScrollTrigger.create({
+    trigger: box,
+    animation: anim,
+    toggleActions: 'play none none none',
+    once: true
+  });
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const video = document.querySelector("#video")
+ScrollTrigger.create({
+    start: "top center",
+    end: "bottom bottom",
+    trigger: "#video",
+    scale: 1,
+    markes:true,
+    onEnter: () => video.play(),
+    onLeave: () => video.pause(),
+    onEnterBack: () => video.play(),
 });

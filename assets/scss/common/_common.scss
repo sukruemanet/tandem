@@ -49,6 +49,31 @@ figure {
     }
 }
 
+.reveal {
+    overflow: hidden;
+    position: relative;
+}
+
+.content-head {
+    text-align: center;
+    margin: 10rem 0;
+
+    .text-large {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        span {
+            font-size: clamp(14rem, 12vw, 20rem);
+            color: $white;
+            font-weight: $font-bold;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+    }
+}
+
 .video {
     position: relative;
     width: 100%;
@@ -140,10 +165,10 @@ figure {
 }
 
 .card-caption {
-    padding: 10vw 0;
+    padding: 10rem 0;
 
     &.padding {
-        padding: 10vw 0 10vw 10rem;
+        padding: 10rem 0 0 10rem;
     }
 
     .items {
@@ -194,25 +219,6 @@ figure {
             }
         }
     }
-
-    .text-large {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        font-size: clamp(14rem, 12vw, 20rem);
-        color: $white;
-        font-weight: $font-bold;
-        letter-spacing: -2px;
-        line-height: 1;
-        margin-top:20rem;
-
-        mark {
-            background: none;
-            color: $white;
-            text-indent: 10vw;
-        }
-    }
 }
 
 .innovations {
@@ -260,6 +266,14 @@ figure {
         width: 50%;
     }
 
+    .caption {
+        padding-left: 5vw;
+    }
+
+    figure {
+        max-height: 90vh;
+    }
+
     p {
         max-width: 70%;
         font-size: clamp(3rem, 12vw, 4.6rem);
@@ -267,7 +281,6 @@ figure {
         letter-spacing: -1px;
         line-height: 1.4;
         color: $white;
-        padding-left: 5vw;
 
         mark {
             background: none;
@@ -279,12 +292,30 @@ figure {
         max-width: 80%;
         font-size: clamp(1.6rem, 12vw, 2.2rem);
         color: $white;
-        padding-left: 5vw;
         display: block;
-        margin-top: 6rem;
+        margin: 6rem 0;
 
         strong {
             font-weight: $font-bold;
         }
+    }
+}
+
+.video-card {
+    height: 90vh;
+    width:90%;
+    margin: 10rem auto;
+    position: relative;
+    overflow: hidden;
+
+    #video {
+        position: absolute;
+        min-width: 100%;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #000;
+        object-fit: cover;
     }
 }
