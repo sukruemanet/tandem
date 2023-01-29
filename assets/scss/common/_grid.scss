@@ -21,36 +21,56 @@ section {
     }
 
     .content-head {
-      .text-large {
+
+      .text-large,
+      .text-small {
         span {
           color: $black;
         }
       }
+
+      p {
+        color: $black;
+      }
     }
 
     .card-caption {
-  
+
       .items {
-  
-          .item {
-              span {
-                  color: $black;
-              }
-  
-              ul {
-  
-                  li {
-                      border-bottom: solid $black .1rem;                    
-                  }
-              }
+
+        .item {
+          span {
+            color: $black;
           }
+
+          ul {
+
+            li {
+              border-bottom: solid $black .1rem;
+            }
+          }
+        }
       }
 
       p {
         font-size: clamp(1.8rem, 12vw, 2.2rem);
         color: $black;
+      }
     }
-  }
+
+    .text-card {
+
+      .caption {
+
+        span {
+          color: $black;
+        }
+
+        p {
+          color: $black;
+        }
+      }
+    }
   }
 
   &.content {
