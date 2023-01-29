@@ -13,12 +13,52 @@ section {
   position: relative;
   overflow: hidden;
 
+  &.light {
+    background: $white;
+
+    .small-head {
+      color: $black;
+    }
+
+    .content-head {
+      .text-large {
+        span {
+          color: $black;
+        }
+      }
+    }
+
+    .card-caption {
+  
+      .items {
+  
+          .item {
+              span {
+                  color: $black;
+              }
+  
+              ul {
+  
+                  li {
+                      border-bottom: solid $black .1rem;                    
+                  }
+              }
+          }
+      }
+
+      p {
+        font-size: clamp(1.8rem, 12vw, 2.2rem);
+        color: $black;
+    }
+  }
+  }
+
   &.content {
     padding: 1rem;
 
     @media only screen and (max-width: $tablet-v) {
       padding: .5rem;
-       }
+    }
   }
 }
 
@@ -50,7 +90,7 @@ section {
 
   @media only screen and (max-width: $tablet-v) {
     grid-column: span 12;
-     }
+  }
 }
 
 .col-5 {
@@ -62,7 +102,7 @@ section {
 
   @media only screen and (max-width: $tablet-h) {
     grid-column: span 12;
-     }
+  }
 }
 
 .col-7 {
