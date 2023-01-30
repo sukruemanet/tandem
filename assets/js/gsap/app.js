@@ -81,10 +81,17 @@ TweenMax.staggerFrom(".start .bottom", 2, {
 
 
 TweenMax.staggerFrom(".start-headline .caption", 2, {
-  delay: .5,
+  delay: 1,
   opacity: 0,
-  y: 10,
-  ease: Expo.easeInOut
+  y: 90,
+  ease: Power4.out,
+});
+
+TweenMax.staggerFrom(".start-headline .info", 2, {
+  delay: .5,
+  autoAlpha: 0,
+  y: 90,
+  ease: Power4.out,
 });
 
 const fadeInAnimated = gsap.utils.toArray('.fadeslideup');

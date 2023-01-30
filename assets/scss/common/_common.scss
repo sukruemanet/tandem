@@ -304,6 +304,7 @@ hr {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                visibility: hidden;
 
                 h1 {
                     margin: 6rem 0;
@@ -947,6 +948,108 @@ hr {
                 background: $white;
                 color: $black;
                 @include fade-transition;
+            }
+        }
+    }
+}
+
+.news-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 10rem 10rem 10rem 40rem;
+
+    @media only screen and (max-width: $tablet-h) {
+        padding: 4rem 2rem;
+    }
+
+    .row {
+        width: 100%;
+        gap: 6rem;
+    }
+
+    .cards {
+
+        .item {
+            margin-bottom: 4rem;
+            min-height: auto;
+            padding-bottom: 0;
+            @include fade-transition;
+            border-bottom: solid $black .1rem;
+
+            &:hover {
+                @include fade-transition;
+                border-bottom: solid #31A09B .1rem;
+
+                .caption {
+                    span {
+                        color: rgba($black, .60);
+                    }
+                }
+            }
+
+            .caption {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+        
+                .caption-item {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .date {
+                    font-size: 1.4rem;
+                    color: $black;
+                    font-weight: $font-medium;
+
+                    @media only screen and (max-width: $tablet-v) {
+                        font-size: 1.2rem;
+                        letter-spacing: 0.575px;
+                     }
+                }
+
+                span {
+                    font-size: clamp(2.8rem, 12vw, 3.4rem);
+                    line-height: 1.4;
+                    color: $black;
+                    font-weight: $font-bold;
+                    letter-spacing: -1px;
+                    margin-top: 2rem;
+                    @include fade-transition;
+                    border-top: solid $black .4rem;
+                    padding: 4rem 0;
+
+                    @media only screen and (max-width: $tablet-v) {
+                        font-size: clamp(1.8rem, 12vw, 2.6rem);
+                     }
+                }
+
+                .view {
+                    display: flex;
+                    font-size: 1.8rem;
+                    align-items: center;
+                    text-decoration: underline;
+                    color: $black;
+                    font-weight: $font-medium;
+                    margin-bottom: 4rem;
+
+                    svg {
+                        margin-left: 1rem;
+                    }
+                }
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 2rem;
+
+                    .writer {
+                        font-size: 1.2rem;
+                        letter-spacing: 1.575px;
+                        color: $dark;
+                        margin-bottom: .5rem;
+                    }
+                }
             }
         }
     }
