@@ -266,6 +266,7 @@ hr {
     &.dark {
         background: $black;
         height: 90vh;
+        padding-top: 19rem;
 
         &.detail {
             height: auto;
@@ -311,7 +312,6 @@ hr {
         }
 
         .headline-content {
-            margin-top: 18rem;
             border-top: solid $white .1rem; 
             display: flex;
             justify-content: space-between;
@@ -426,6 +426,39 @@ hr {
                 position: relative;
                 overflow: hidden;
             }
+           }
+
+           .search-info {
+                border-bottom: solid $white .1rem;
+                height: calc(100% - 4rem);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .top {
+
+                    span, h4 {
+                        color: $white;
+                    }
+    
+                    span {
+                        font-size: 1.8rem;
+                        margin-bottom: 2rem;
+                        display: block;
+                        text-align: center;
+                    }
+
+                    h4 {
+                        font-weight: $font-bold;
+                    }
+                }
+
+                .search-box {
+                    height: auto;
+                    padding-top: 10rem;
+                }
+           
            }
         }
     }

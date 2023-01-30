@@ -119,3 +119,51 @@ ScrollTrigger.create({
     onLeave: () => video.pause(),
     onEnterBack: () => video.play(),
 });
+
+
+//Search Menu
+const tl2 = gsap.timeline();
+const searchMenu = gsap.timeline({
+  paused: "true",
+});
+
+searchMenu.to(".search-menu", 0.10, {
+  autoAlpha: 1,
+  visibility:"visible"
+});
+
+searchMenu.to(".search-content", {
+  duration: .8,
+  y: 0,
+  ease:Power3.easeOut,
+});
+
+searchMenu.from(
+  ".searchline",
+  {
+    duration: 1,
+    stagger: {
+      amount: 0.5,
+    },
+    width: "0%",
+  },
+  "-=.2"
+);
+
+searchMenu.from(
+  ".search-close",
+  {
+    opacity: 0,
+    // rotate: "180deg",
+  },
+  "-=.2"
+);
+
+function searchOpen() {
+  searchMenu.play();
+  smoother.paused(true);
+}
+function searchClose() {
+  searchMenu.reverse();
+  smoother.paused(false);
+}
