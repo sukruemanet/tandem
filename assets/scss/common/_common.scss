@@ -67,11 +67,17 @@ hr {
 }
 
 .content-head {
+    width: 100%;
     text-align: center;
     margin: 10rem 0;
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+
+    @media only screen and (max-width: $tablet-h) {
+        margin: 4rem 0;
+    }
 
     &.padding {
         padding: 0 10rem;
@@ -92,6 +98,10 @@ hr {
 
             @media only screen and (max-width: $desktop) {
                 font-size: clamp(12rem, 12vw, 14rem);
+            }
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(5rem, 12vw, 7rem);
             }
         }
     }
@@ -147,6 +157,10 @@ hr {
     position: relative;
     width: 100%;
     height: 100vh;
+    
+    @media only screen and (max-width: $tablet-h) {
+        height: 50vh;
+    }
 
     &:before {
         content: '';
@@ -167,6 +181,10 @@ hr {
         left: 0;
         object-fit: cover;
         padding: 10rem;
+
+        @media only screen and (max-width: $tablet-h) {
+            padding: 0 2rem;
+        }
     }
 }
 
@@ -189,6 +207,15 @@ hr {
         max-width: 100%;
         overflow: hidden;
         // left:25vw
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
     }
     
     .caption {
@@ -200,6 +227,10 @@ hr {
         color: $white;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $tablet-h) {
+            padding: 2rem;
+        }
 
         .text-reveal {
             overflow: hidden;
@@ -213,8 +244,13 @@ hr {
                 line-height: 1;
                 transform: translateY(100%);
       
-                @media only screen and (max-width: $desktop) {
-                    font-size: clamp(7rem, 12vw, 10rem);
+                @media only screen and (max-width: $desktop-sm) {
+                    font-size: clamp(5rem, 12vw, 8rem);
+                }
+
+                @media only screen and (max-width: $tablet-h) {
+                    font-size: clamp(4rem, 12vw, 5.2rem);
+                    letter-spacing: -1.41667px;
                 }
             }
         }
@@ -469,10 +505,22 @@ hr {
 
     &.padding {
         padding: 10rem 0 0 10rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 6rem 4rem 0 4rem;
+        }
+
+        @media only screen and (max-width: $tablet-h) {
+            padding: 6rem 2rem;
+        }
     }
 
     .items {
         display: flex;
+
+        @media only screen and (max-width: $tablet-h) {
+            flex-direction: column-reverse;
+        }
 
         .item {
             width: 50%;
@@ -480,12 +528,25 @@ hr {
             flex-direction: column;
             overflow: hidden;
 
+            @media only screen and (max-width: $tablet-h) {
+                width: 100%;
+            }
+
             &.center {
                 justify-content: center;
             }
 
             &:first-child {
                 padding-right: 10vw;
+
+                @media only screen and (max-width: $desktop-sm) {
+                    padding-right: 6rem;
+                }
+
+                @media only screen and (max-width: $tablet-h) {
+                    padding-right: 0;
+                    margin-top: 6rem;
+                }
             }
 
             span {
@@ -496,7 +557,7 @@ hr {
                 display: flex;
     
                 @media only screen and (max-width: $desktop) {
-                    font-size: clamp(3.8rem, 12vw, 4.6rem);
+                    font-size: clamp(3.2rem, 12vw, 4rem);
                 }
             }
 
@@ -591,10 +652,23 @@ hr {
     color: $white;
     display: flex;
 
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 5vw 4rem;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+       flex-direction: column;
+       padding: 6rem 2rem;
+    }
+
     .item {
         width: 50%;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $tablet-h) {
+           width: 100%;
+         }
     }
 
     span {
@@ -602,9 +676,18 @@ hr {
         font-weight: $font-bold;
         letter-spacing: -4px;
         line-height: 1;
+
+        @media only screen and (max-width: $desktop-sm) {
+            font-size: clamp(5rem, 12vw, 7rem);
+            letter-spacing: -2px;
+        }
     }
 
     .list {
+        @media only screen and (max-width: $tablet-h) {
+            margin-top: 4rem;
+         }
+     
         li {
             border: solid $white .1rem;
             display: flex;
@@ -613,8 +696,21 @@ hr {
             padding: 5rem;
             margin-bottom: 4rem;
 
+            @media only screen and (max-width: $desktop-sm) {
+                font-size: clamp(2rem, 12vw, 2.6rem);
+            }
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(1.8rem, 12vw, 2.4rem);
+                padding: 4rem 2rem;
+            }
+
             i {
                 margin-right: 4rem;
+
+                @media only screen and (max-width: $tablet-h) {
+                    margin-right: 2rem;
+                }
             }
         }
     }
@@ -625,12 +721,26 @@ hr {
     min-height: 90vh;
     padding: 5vw 0;
 
+    @media only screen and (max-width: $tablet-h) {
+        padding: 6rem 2rem;
+        flex-direction: column;
+    }
+
     .item {
         width: 50%;
+
+        @media only screen and (max-width: $tablet-h) {
+            width: 100%;
+         }
     }
 
     .caption {
         padding-left: 5vw;
+
+        @media only screen and (max-width: $tablet-h) {
+           padding: 0;
+           margin-top: 4rem;
+        }
     }
 
     figure {
@@ -649,6 +759,12 @@ hr {
             font-size: clamp(2.8rem, 12vw, 3.2rem);
             max-width: 85%;
         }
+
+        @media only screen and (max-width: $tablet-h) {
+            max-width: 100%;
+            font-size: clamp(2rem, 12vw, 2.6rem);
+            letter-spacing: -.1px;
+         }
 
         mark {
             background: none;
@@ -778,10 +894,10 @@ hr {
     justify-content: space-between;
     padding: 20rem 10rem;
 
-    @media only screen and (max-width: $tablet-v) {
-       max-width: 100%;
-       padding:6em 5vw;
-     }
+    @media only screen and (max-width: $tablet-h) {
+        flex-direction: column;  
+        padding: 6rem 2rem;
+    }
 
     small {
         width: 40rem;
@@ -797,6 +913,11 @@ hr {
         color: $white;
         line-height: 1;
         margin-bottom: 6rem;
+
+        @media only screen and (max-width: $tablet-h) {
+            font-size: clamp(5rem, 12vw, 7rem);
+            margin-top: 2rem;
+        }
     }
 
     
@@ -836,6 +957,10 @@ hr {
 
     .faq-content {
         width: 70%;
+
+        @media only screen and (max-width: $tablet-h) {
+            width: 100%;
+        }
     }
 
     .accordion-menu {
@@ -874,7 +999,7 @@ hr {
             align-items: center;
             padding: 4rem 6rem 4rem 4rem;
     
-            @media only screen and (max-width: $tablet-v) {
+            @media only screen and (max-width: $tablet-h) {
                 padding: 2rem 6rem 2rem 2rem;
                 font-size: clamp(1.4rem, 6vw, 1.7rem);
               }
@@ -956,6 +1081,11 @@ hr {
         top: 0;
         left: 0;
         padding: 10rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 6rem 2rem;
+            width: 100%;
+        }
     }
 
     p {
@@ -968,34 +1098,10 @@ hr {
         @media only screen and (max-width: $desktop) {
             font-size: clamp(3rem, 12vw, 4rem);
         }
-    }
 
-    span {
-        max-width: 110rem;
-        display: block;
-        font-size: clamp(3.2rem, 12vw, 4rem);
-        letter-spacing: 0.6291px;
-        font-weight: $font-medium;
-        line-height: 1.2;
-        color: $white;
-
-        @media only screen and (max-width: $desktop) {
-            font-size: clamp(3rem, 12vw, 3.4rem);
+        @media only screen and (max-width: $tablet-h) {
+            font-size: clamp(2rem, 12vw, 2.8rem);
         }
-
-        a {
-            color: $white;
-            text-decoration: underline;
-        }
-    }
-
-    h5 {
-        font-size: clamp(30rem, 12vw, 40rem);
-        letter-spacing: 0.6291px;
-        font-weight: $font-bold;
-
-        color: $white;
-        letter-spacing: -14px;
     }
 
     .bottom {
@@ -1008,11 +1114,69 @@ hr {
         align-items: flex-end;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $desktop-sm) {
+            bottom: -6rem;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $tablet-v) {
+            bottom: -4rem;
+        }
+        
+
+        h5 {
+            font-size: clamp(30rem, 12vw, 40rem);
+            font-weight: $font-bold;
+            color: $white;
+            letter-spacing: -14px;
+    
+            @media only screen and (max-width: $desktop-sm) {
+                font-size: clamp(10rem, 12vw, 20rem);
+                letter-spacing: -4px;
+            }
+    
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(10rem, 12vw, 20rem);
+            }
+
+            @media only screen and (max-width: $tablet-v) {
+                font-size: clamp(6rem, 12vw, 10rem);
+                margin-top: 4rem;
+            }
+        }
+
+        span {
+            max-width: 110rem;
+            display: block;
+            font-size: clamp(3.2rem, 12vw, 4rem);
+            letter-spacing: 0.6291px;
+            font-weight: $font-medium;
+            line-height: 1.2;
+            color: $white;
+    
+            @media only screen and (max-width: $desktop) {
+                font-size: clamp(3rem, 12vw, 3.4rem);
+            }
+    
+            @media only screen and (max-width: $desktop-sm) {
+                font-size: clamp(2rem, 12vw, 2.2rem);
+            }
+    
+            a {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
     }
 }
 
 .news {
     padding: 20rem 10rem;
+
+    @media only screen and (max-width: $tablet-h) {
+        padding: 6rem 2rem;
+    }
 
     .content {
         width: 100%;
@@ -1029,16 +1193,33 @@ hr {
             font-size: 3.2rem;
             color: $white;
             border-bottom: solid $white .1rem;
+
+            @media only screen and (max-width: $tablet-h) {
+                padding: 2rem;
+                font-size: 2.8rem;
+            }
         }
 
         .item {
             display: flex;
             justify-content: space-between;
+
+            @media only screen and (max-width: $tablet-v) {
+                flex-direction: column;
+            }
         
             .info {
                 border-right: solid $white .1rem;
                 padding: 10rem;
                 width: 100%;
+
+                @media only screen and (max-width: $tablet-h) {
+                    padding: 4rem 2rem;
+                }
+
+                @media only screen and (max-width: $tablet-v) {
+                    border: none;
+                }
 
                 .top {
                     color: $white;
@@ -1056,6 +1237,10 @@ hr {
                         font-weight: $font-bold;
                         margin: 4rem 0;
                         display: flex;
+
+                        @media only screen and (max-width: $tablet-h) {
+                            font-size: 2.6rem;
+                        }
                     }
 
                     a {
@@ -1079,6 +1264,12 @@ hr {
             justify-content: center;
             align-items: center;
             @include fade-transition;
+
+            @media only screen and (max-width: $tablet-v) {
+                border-top: solid $white .1rem;
+                width: 100%;
+                height: 6rem;
+            }
             
             &:hover {
                 background: $white;

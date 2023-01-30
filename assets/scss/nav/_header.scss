@@ -14,6 +14,15 @@ header {
   justify-content: space-between;
   @include fade-transition;
 
+  @media only screen and (max-width: $tablet-h) {
+    padding: 0 2rem;
+  }
+
+  @media only screen and (max-width: $tablet-h) {
+    height: 6rem;
+    background-size: 13rem;
+  }
+
   .logo {
     width: 18rem;
     height: 7rem;
@@ -21,7 +30,8 @@ header {
     background: url(../../assets/images/main/logo.svg) no-repeat center;
     background-size: 18rem;
 
-    @media only screen and (max-width: $tablet-v) {
+    @media only screen and (max-width: $tablet-h) {
+      width: 14rem !important;
       background-size: 13rem;
     }
   }
@@ -37,7 +47,7 @@ header {
     ul {
       display: flex;
   
-      @media only screen and (max-width: $tablet-v) {
+      @media only screen and (max-width: $tablet-h) {
         display: none;  
       }
   
@@ -60,15 +70,19 @@ header {
       cursor: pointer;
       border-radius: 100%;
       border:solid $white .2rem;
+
+      @media only screen and (max-width: $tablet-v) {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 
   &.scrolled {
     height: 10rem;
-/* From https://css.glass */
-background: rgba(0, 0, 0, 0.85);
-backdrop-filter: blur(19.7px);
--webkit-backdrop-filter: blur(19.7px);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(19.7px);
+    -webkit-backdrop-filter: blur(19.7px);
 
     &.bghide {
         background: none;
@@ -79,16 +93,16 @@ backdrop-filter: blur(19.7px);
     }
 
     .logo {
-      width: 18rem;
+      width: 14rem;
       height: 7rem;
       display: flex;
       background: url(../../assets/images/main/logo.svg) no-repeat center;
       background-size: 18rem;
 
-        @media only screen and (max-width: $tablet-v) {
-            width: 8rem;
-            background-size: 16rem;
-        }
+      @media only screen and (max-width: $tablet-h) {
+        width: 14rem;
+        background-size: 13rem;
+      }
     }
 }
 
@@ -96,11 +110,16 @@ backdrop-filter: blur(19.7px);
     top: -12rem;
 
     .logo {
-      width: 18rem;
+      width: 14rem;
       height: 7rem;
       display: flex;
       background: url(../../assets/images/main/logo.svg) no-repeat center;
       background-size: 18rem;
+
+      @media only screen and (max-width: $tablet-h) {
+        width: 14rem;
+        background-size: 13rem;
+      }
     }
 }
 

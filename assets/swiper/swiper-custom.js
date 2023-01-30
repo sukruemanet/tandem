@@ -12,6 +12,12 @@ var swiper = new Swiper(".carousel-news-swiper", {
     clickable: true,
   },
   breakpoints: {
+    100: {
+      slidesPerView: 1.2,
+    },
+    414: {
+      slidesPerView: 1.2,
+    },
     768: {
       slidesPerView: 2.2,
     },

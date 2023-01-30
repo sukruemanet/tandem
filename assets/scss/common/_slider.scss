@@ -93,14 +93,27 @@
             justify-content: space-between;
             z-index: 2;
 
+            @media only screen and (max-width: $tablet-h) {
+                flex-direction: column;
+                max-width: 100%;
+                padding: 6rem 2rem;
+            }
+
             .item {
                 width: 50%;
                 display: flex;
 
+                @media only screen and (max-width: $tablet-h) {
+                    width: 100%;
+                }
+
                 &:last-child {
                     max-width: 40rem;
-                
                     flex-direction: column;
+
+                    @media only screen and (max-width: $tablet-h) {
+                        max-width: 100%;
+                    }
                 }
             }
 
@@ -116,8 +129,8 @@
                 font-size: clamp(2.8rem, 12vw, 3.6rem);
                 color: $white;
 
-                @media only screen and (max-width: $tablet-v) {
-                    font-size: clamp(2.8rem, 12vw, 3rem);    
+                @media only screen and (max-width: $tablet-h) {
+                    font-size: clamp(2.4rem, 12vw, 2.8rem);    
                 }
             }
 
@@ -126,6 +139,12 @@
                 font-size: clamp(2.8rem, 12vw, 5.6rem);
                 color: $white;
                 letter-spacing: -2px;
+
+                @media only screen and (max-width: $tablet-h) {
+                    max-width: 100%;
+                    margin-bottom: 6rem;
+                    font-size: clamp(2.8rem, 12vw, 4rem);
+                }
             }
         }
     }

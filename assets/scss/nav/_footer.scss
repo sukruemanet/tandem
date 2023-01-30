@@ -7,11 +7,11 @@ footer {
         display: flex;
         border-top:solid $white .1rem;
         border-bottom:solid $white .1rem;
-  
+
 
         @media only screen and (max-width: $tablet-h) {
           flex-direction: column-reverse;            
-           }
+        }
 
         .item {
             flex: 1;
@@ -21,7 +21,6 @@ footer {
 
             @media only screen and (max-width: $tablet-h) {
                 padding: 2rem;
-       
                  }
 
             &:first-child {
@@ -40,6 +39,10 @@ footer {
                 border-left:solid $white .1rem;
                 border-right:solid $white .1rem;
                 justify-content: space-between;
+
+                @media only screen and (max-width: $tablet-v) {
+                    border: none;
+                }
             }
 
             .logo {
@@ -94,6 +97,11 @@ footer {
             .newsletter {
                 display: flex;
                 margin-bottom: 10rem;
+
+                @media only screen and (max-width: $tablet-v) {
+                    width: 100%;
+                    margin-bottom: 6rem;
+                }
                 
                 form {
                     margin: 0;
@@ -150,6 +158,10 @@ footer {
         display: flex;
         margin-top: 4rem;
 
+        @media only screen and (max-width: $tablet-v) {
+            flex-direction: column;
+        }
+
         @media only screen and (max-width: $tablet-h) {
             margin-top: 4rem;      
         }
@@ -161,6 +173,10 @@ footer {
                 line-height: 1.2;
                 color: $white;
                 font-weight: $font-medium;
+
+                @media only screen and (max-width: $tablet-v) {
+                    line-height: 1.6;
+                }
 
                 &:hover {
                     text-decoration: underline;
@@ -176,6 +192,10 @@ footer {
         font-weight: $font-bold;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $tablet-v) {
+            font-size: 2rem;
+        }
 
         a {
             color: $white;
@@ -198,6 +218,10 @@ footer {
         font-size: 2.6rem;
         color: $white;
         font-weight: $font-bold;
+
+        @media only screen and (max-width: $tablet-v) {
+            font-size: 2rem;
+        }
     }
 
     .form-item {
