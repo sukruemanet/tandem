@@ -60,6 +60,10 @@ hr {
     display: flex;
     background: $black;
     margin: 6rem 0 0;
+
+    &.bold {
+        height: .4rem;
+    }
 }
 
 .content-head {
@@ -107,6 +111,25 @@ hr {
 
             @media only screen and (max-width: $desktop) {
                 font-size: clamp(6rem, 12vw, 7rem);
+            }
+        }
+    }
+
+    .text-xsmall {
+        max-width: 90rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        span {
+            font-size: clamp(4rem, 12vw, 5rem);
+            color: $white;
+            font-weight: $font-medium;
+            line-height: 1.2;
+            letter-spacing: -2px;
+
+            @media only screen and (max-width: $desktop) {
+                font-size: clamp(3rem, 12vw, 4rem);
             }
         }
     }
@@ -244,6 +267,49 @@ hr {
         background: $black;
         height: 90vh;
 
+        &.detail {
+            height: auto;
+
+            .headline-content {
+                .content-top {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 6rem 0;
+    
+                    span {
+                        font-weight: $font-medium;
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                .content-info {
+                    padding: 4rem;
+                    .image {
+                        width: 100%;
+                        height: 70vh;
+   
+                    }
+                }
+            }
+
+            .reveal {
+                position: relative;
+                overflow: hidden;
+                height: 70vh;
+
+                figure {
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
         .headline-content {
             margin-top: 18rem;
             border-top: solid $white .1rem; 
@@ -255,13 +321,11 @@ hr {
  
             .left {
                 width: 10rem;
-                height: 100%;
                 border-right: solid $white .1rem;
             }
 
             .right {
                 width: 10rem;
-                height: 100%;
                 border-left: solid $white .1rem;
             }
 
@@ -292,12 +356,28 @@ hr {
                     font-size: 2rem;
                     color: $white;
                 }
+                
+                .back {
+                    position: absolute;
+                    top: 2rem;
+                    right: 2rem;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    text-decoration: underline;
+                    color: $white;
+
+                    svg {
+                        margin-right: 1rem;
+                    }
+                }
             }
 
            .content-info {
             width: 100%;
             display: flex;
             border-bottom: solid $white .1rem;
+
             .info {
                 width: 50%;
                 padding-left: 4rem;
@@ -1134,3 +1214,108 @@ hr {
     }
 }
 
+.detail-content {
+    max-width: 90rem;
+    margin: auto;
+    padding: 10rem 0;
+
+    span {
+        font-size: 1.8rem;
+        font-weight: $font-bold;
+    }
+
+    p {
+        font-size: 2.2rem;
+        line-height: 1.4;
+        font-weight: $font-bold;
+    }
+
+    hr {
+        margin-top: 2rem;
+    }
+
+    .table {
+        width: 100%;
+        border: solid $black .1rem;
+        margin-top: 2rem;
+        position: relative;
+        margin-bottom: 4rem;
+
+        // &:before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: .4rem;
+        //     background: $black;
+        //     display: block;
+        // }
+
+        .item {
+            display: flex;
+            height: 7rem;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: solid $black .1rem;
+            font-size: 1.8rem;
+            color: $black;
+            padding: 0 4rem;
+
+            div {
+                &:last-child {
+                    span {
+                        padding-left: 4rem;
+                    }
+                }
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+
+    .share {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        padding: 4rem 0 0;
+
+        ul {
+            display: flex;
+            margin-left: 2rem;
+            li {
+                margin: 0 .2rem;
+            }
+        }
+
+        i {
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 100%;
+            background: $black;
+            cursor: pointer;
+            border:solid transparent .1rem;
+            @include fade-transition;
+
+            &:hover {
+                border:solid $black .1rem;
+                background: $white;
+
+                svg {
+                    fill: $dark;
+                }
+            }
+
+            svg {
+                fill: $white;
+            }
+        }
+    }
+}
