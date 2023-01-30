@@ -447,6 +447,10 @@ hr {
             flex-direction: column;
             overflow: hidden;
 
+            &.center {
+                justify-content: center;
+            }
+
             &:first-child {
                 padding-right: 10vw;
             }
@@ -525,6 +529,24 @@ hr {
             color: $white;
             font-weight: $font-bold;
 
+        }
+
+        .list {
+            margin-left: auto;
+            padding-top: 4rem;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                margin-top: 4rem;
+                
+                li {
+                    font-size: clamp(2rem, 12vw, 2.4rem);
+                    color: $white;
+                    font-weight: $font-bold;
+                    line-height: 1.6;
+                }
+            }
         }
     }
 }
@@ -638,6 +660,7 @@ hr {
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
     }
 
