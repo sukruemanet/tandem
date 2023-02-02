@@ -157,6 +157,23 @@ form {
     }
 }
 
+.contact-form {
+    max-width: 140rem;
+    width: 100%;
+    margin: auto;
+    padding: 10rem 2rem;
+
+    .row {
+        width: 100%;
+        gap:4rem;
+    }
+
+    .contact-head {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}
+
 /*#region Checkbox */
 .checkbox {
     display: flex;

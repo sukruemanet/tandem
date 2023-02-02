@@ -1437,6 +1437,10 @@ hr {
                 }
             }
         }
+
+        .icon {
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -1474,7 +1478,7 @@ hr {
     p {
         font-size: 2.2rem;
         line-height: 1.4;
-        font-weight: $font-bold;
+        font-weight: $font-normal;
     }
 
     hr {
@@ -1563,6 +1567,57 @@ hr {
             svg {
                 fill: $white;
             }
+        }
+    }
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    height: calc(100% - 5rem);
+    span {
+        font-size: clamp(1.8rem, 12vw, 2.6rem);
+        color: $white;
+        line-height: 1.4;
+    }
+
+    .social {
+        margin: 6rem 0 4rem;
+        display: flex;
+
+        i {
+            width: 5rem;
+            height: 5rem;
+            background: $white;
+            border-radius: 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+
+            svg {
+                fill:$black;
+            }
+        }
+    }
+
+    .map {
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex: 1;
+        background: #0C0C0E;
+        position: relative;
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
         }
     }
 }

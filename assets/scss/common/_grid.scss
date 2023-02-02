@@ -71,6 +71,115 @@ section {
         }
       }
     }
+
+    h1 {
+      color: $black;
+    }
+
+    form {    
+      
+      label {
+          color: $dark;
+      }
+  
+      input,
+      textarea {
+          color: $black;
+          border: solid $black .1rem;
+
+          &:focus {
+          //    background: $white;
+          //     border: solid $white .1rem;
+          }
+  
+          &::-webkit-input-placeholder {
+              /* Edge */
+              color: $black;
+          }
+  
+          &:-ms-input-placeholder {
+              /* Internet Explorer 10-11 */
+              color: $black;
+          }
+  
+          &::placeholder {
+            color: $black;
+          }
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      flex-grow: 1;
+      align-content: center;
+      align-items: center;
+      height: 4rem;
+      max-width: 60%;
+  
+      @media only screen and (max-width: $tablet-h) {
+          height: auto;
+          padding-bottom: 2rem;
+      }
+  
+      @media only screen and (max-width: $tablet-v) {
+          max-width: 100%;
+      }
+  
+      .link {
+          text-align: left;
+          font-size: 1.5rem;
+  
+          a {
+              color: $dark;
+              text-decoration: underline;
+              cursor: pointer;
+          }
+      }
+  
+      input {
+  
+          &:checked {
+              + :after {
+                  content: '';
+                  background: url(../images/main/check.svg) no-repeat center center;
+                  background-size: 2rem;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 2.8rem;
+                  height: 100%;
+                  text-align: center;
+              }
+  
+              + :before {
+                  border: solid $black .1rem;
+              }
+  
+              +label {
+                  color: $black;
+              }
+          }
+      }
+  
+      label {
+          color: $black;
+  
+          span {
+              color: $black;
+          }
+  
+          a {
+              color: $black;
+              &:hover {
+                  color: $black;
+              }
+          }
+  
+          &:before {
+              border: solid $black .1rem;
+          }
+      }
+  }
   }
 
   &.content {
