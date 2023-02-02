@@ -1527,6 +1527,76 @@ hr {
         }
     }
 
+    &.doc {
+        > div {
+            margin-bottom: 4rem;
+        }
+        ol {
+            display: list-item;
+            padding-left: 2rem;
+            margin: 2rem 0;
+            li {
+                font-size: 1.8rem;
+                line-height: 1.6;
+                letter-spacing: -0.5px;
+                list-style: circle;
+                padding: .5rem 0;
+            }
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            line-height: 1.6;
+
+            strong {
+                font-weight: $font-medium;
+            }
+        }
+
+        a {
+            color: $black;
+            text-decoration: underline;
+        }
+
+        h4 {
+            font-size: 2.8rem;
+            font-weight: $font-bold;
+        }
+
+        table {
+            width: 100%;
+            margin: 18px 0;
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.5;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+     
+    
+            tr {
+                margin-bottom: 2px;
+            } 
+    
+            th {
+                background-color: #eee;
+                padding: 1rem 0 1rem 1rem;
+                font-weight: $font-medium;
+
+            } 
+    
+            td {
+                padding: 1rem 0 1rem 1rem;
+                font-weight: $font-normal;
+            }
+
+            strong {
+                font-weight: $font-medium;
+            }
+        } 
+    }
+
+
     .share {
         display: flex;
         justify-content: center;
