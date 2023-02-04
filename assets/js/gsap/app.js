@@ -101,6 +101,13 @@ TweenMax.staggerFrom(".content-top h1, .content-top span", 2, {
   ease: Power4.out,
 });
 
+TweenMax.staggerFrom(".content-top h1, .content-top h2", 2, {
+  delay: .5,
+  autoAlpha: 0,
+  y: 90,
+  ease: Power4.out,
+});
+
 TweenMax.staggerFrom(".search-info span, .search-info h4, .search-info .search-box", 2, {
   delay: .5,
   autoAlpha: 0,
