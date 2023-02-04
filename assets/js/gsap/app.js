@@ -214,7 +214,7 @@ gsap.to(document.body, {duration: 1, opacity: 1, ease: "power2.inOut"});
 const button = document.querySelector("#myButton");
 
   button.addEventListener("click", function() {
-    gsap.to(document.body, {duration: 1, y: -1000, ease: "power2.inOut"});
+    gsap.to(document.body, {duration: 1, ease: "power2.inOut"});
     setTimeout(() => {
       window.location.href = "next-page.html";
     }, 1000);
