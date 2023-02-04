@@ -181,3 +181,12 @@ function searchClose() {
   searchMenu.reverse();
   smoother.paused(false);
 }
+
+// GSAP fade in efekti
+var tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+tl.to("#fadeBody", {delay: .3, duration: 2, opacity: 1, visibility: "visible"});
+
+// Butona tıklama olayı
+document.getElementById("button").addEventListener("click", function() {
+  window.location.href = "nextPage.html";
+});
