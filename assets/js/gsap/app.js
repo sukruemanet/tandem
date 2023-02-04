@@ -94,14 +94,21 @@ TweenMax.staggerFrom(".start-headline .info", 2, {
   ease: Power4.out,
 });
 
-TweenMax.staggerFrom(".content-top h1, .content-top span", 2, {
+TweenMax.staggerFrom(".content-top span", 2, {
   delay: .5,
   autoAlpha: 0,
   y: 90,
   ease: Power4.out,
 });
 
-TweenMax.staggerFrom(".content-top h1, .content-top h2", 2, {
+TweenMax.staggerFrom(".content-top h2", 2, {
+  delay: .5,
+  autoAlpha: 0,
+  y: 90,
+  ease: Power4.out,
+});
+
+TweenMax.staggerFrom(".content-top h1", 2, {
   delay: .5,
   autoAlpha: 0,
   y: 90,
