@@ -190,10 +190,32 @@ function searchClose() {
 }
 
 // GSAP fade in efekti
-var tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-tl.to("#fadeBody", {delay: .3, duration: 2, opacity: 1, visibility: "visible"});
+// var tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+// tl.from("#fadeBody", {y:-400, opacity: 0,});
+// tl.to("#fadeBody", {delay: .3, duration: 2, opacity: 1, visibility: "visible", y:0,});
 
-// Butona tıklama olayı
-document.getElementById("button").addEventListener("click", function() {
-  window.location.href = "nextPage.html";
-});
+// // Butona tıklama olayı
+// document.getElementById("button").addEventListener("click", function() {
+//   window.location.href = "nextPage.html";
+// });
+
+// gsap.to(document.body, { duration: 1, opacity: 1});
+// const button = document.querySelector("#myButton");
+
+//   button.addEventListener("click", function() {
+//     gsap.to(document.body, {duration: 1, opacity: 0});
+//     setTimeout(() => {
+//       window.location.href = "next-page.html";
+//     }, 1000);
+//   })
+
+gsap.to(document.body, {duration: 1, opacity: 1, ease: "power2.inOut"});
+
+const button = document.querySelector("#myButton");
+
+  button.addEventListener("click", function() {
+    gsap.to(document.body, {duration: 1, y: -1000, ease: "power2.inOut"});
+    setTimeout(() => {
+      window.location.href = "next-page.html";
+    }, 1000);
+  });
