@@ -166,6 +166,10 @@ form {
     .row {
         width: 100%;
         gap:4rem;
+
+        @media only screen and (max-width: $phone) {
+            gap: 0;
+          }
     }
 
     .contact-head {

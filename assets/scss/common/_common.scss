@@ -294,9 +294,16 @@ hr {
 }
 
 .start-headline {
-    height: 90vh;
     position: relative;
     overflow: hidden;
+
+    &.image {
+        height: 90vh;
+
+        figure {
+            height: 90vh;
+        }
+    }
 
     .caption {
         position: absolute;
@@ -325,25 +332,19 @@ hr {
         visibility: hidden;
 
         figure {
-            @media only screen and (max-width: $tablet-h) {
-                height: 90vh;
-            }
             img {
-                @media only screen and (max-width: $tablet-h) {
-                    position: absolute;
+                position: relative;
                     width: 100%;
                     height: 100%;
                     top: 0;
                     left: 0;
                     object-fit: cover;
-                }
             }
         }
     } 
 
     &.dark {
         background: $black;
-        height: 90vh;
         padding-top: 19rem;
 
         &.detail {
@@ -354,6 +355,10 @@ hr {
                     flex-direction: column;
                     height: auto;
                     padding: 6rem 0;
+
+                    @media only screen and (max-width: $desktop-sm) {
+                        padding: 4rem 0;
+                    }
     
                     span {
                         font-weight: $font-medium;
@@ -366,7 +371,6 @@ hr {
                     .image {
                         width: 100%;
                         height: 70vh;
-   
                     }
                 }
             }
@@ -392,23 +396,30 @@ hr {
         .headline-content {
             border-top: solid $white .1rem; 
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 6rem;
             width: 100%;
             height: 100%;
  
             .left {
                 width: 10rem;
                 border-right: solid $white .1rem;
+
+                @media only screen and (max-width: $desktop-sm) {
+                    width: 2rem;
+                  }
             }
 
             .right {
                 width: 10rem;
                 border-left: solid $white .1rem;
+
+                @media only screen and (max-width: $desktop-sm) {
+                    width: 2rem;
+                  }
             }
 
             .content {
                 width: 100%;
+                margin-bottom: 6rem;
             }
             
             .content-top {
@@ -419,6 +430,15 @@ hr {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                @media only screen and (max-width: $tablet-h) {
+                    flex-direction: column;
+                    padding: 2rem;
+                    height: auto;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
                 
                 &:before {
                     content: '';
@@ -456,6 +476,10 @@ hr {
             display: flex;
             border-bottom: solid $white .1rem;
 
+            @media only screen and (max-width: $tablet-h) {
+                flex-direction: column;
+            }
+
             .info {
                 width: 50%;
                 padding-left: 4rem;
@@ -463,6 +487,11 @@ hr {
                 flex-direction: column;
                 justify-content: center;
                 visibility: hidden;
+
+                @media only screen and (max-width: $tablet-h) {
+                    width: 100%;
+                    padding: 4rem 2rem;
+                }
 
                 h1 {
                     margin: 6rem 0;
@@ -499,10 +528,20 @@ hr {
 
             
             }
+
             .image {
                 width: 50%;
                 position: relative;
                 overflow: hidden;
+
+                @media only screen and (max-width: $tablet-h) {
+                    width: 100%;
+                    margin-top: 4em;
+                }
+
+                img {
+                    position: relative;
+                }
             }
            }
 
@@ -587,7 +626,7 @@ hr {
 
                 @media only screen and (max-width: $tablet-h) {
                     padding-right: 0;
-                    margin-top: 6rem;
+                    margin-top: 0;
                 }
             }
 
@@ -640,6 +679,14 @@ hr {
         font-weight: $font-bold;
         margin-top: 8rem;
         margin-left: auto;
+
+        @media only screen and (max-width: $desktop-sm) {
+            margin-top: 0;
+        }
+
+        @media only screen and (max-width: $tablet-h) {
+            max-width: 100%;
+        }
     }
 }
 
@@ -1370,6 +1417,10 @@ hr {
     align-items: flex-start;
     padding: 10rem 10rem 10rem 40rem;
 
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 10rem 2rem;
+    }
+
     @media only screen and (max-width: $tablet-h) {
         padding: 4rem 2rem;
     }
@@ -1377,6 +1428,10 @@ hr {
     .row {
         width: 100%;
         gap: 6rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            gap: 2rem;
+        }
     }
 
     .cards {
@@ -1618,6 +1673,10 @@ hr {
     margin: auto;
     padding: 10rem 0;
 
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 6rem 2rem;
+      }
+
     span {
         font-size: 1.8rem;
         font-weight: $font-bold;
@@ -1627,6 +1686,10 @@ hr {
         font-size: 2.2rem;
         line-height: 1.4;
         font-weight: $font-normal;
+
+        @media only screen and (max-width: $tablet-h) {
+            font-size: 1.8rem;
+          }
     }
 
     hr {
@@ -1660,6 +1723,17 @@ hr {
             font-size: 1.8rem;
             color: $black;
             padding: 0 4rem;
+
+            span {
+                @media only screen and (max-width: $tablet-h) {
+                    font-size: 1.4rem;
+                  }
+            }
+
+            @media only screen and (max-width: $tablet-h) {
+                padding: 0 2rem;
+                font-size: 1.4rem;
+              }
 
             div {
                 &:last-child {
@@ -1721,7 +1795,6 @@ hr {
             border: 1px solid #ccc;
             border-collapse: collapse;
      
-    
             tr {
                 margin-bottom: 2px;
             } 
@@ -1792,11 +1865,19 @@ hr {
 .contact {
     width: 100%;
     display: flex;
-    height: calc(100% - 5rem);
+
+    @media only screen and (max-width: $tablet-h) {
+        flex-direction: column;
+      }
+
     span {
         font-size: clamp(1.8rem, 12vw, 2.6rem);
         color: $white;
         line-height: 1.4;
+
+        @media only screen and (max-width: $tablet-h) {
+            font-size: clamp(1.8rem, 12vw, 2rem);
+          }
     }
 
     .social {
@@ -1813,20 +1894,30 @@ hr {
             align-items: center;
             margin-right: 1rem;
 
+            @media only screen and (max-width: $tablet-h) {
+                width: 4rem;
+                height: 4rem;
+              }
+
             svg {
                 fill:$black;
             }
         }
     }
 
+
     .map {
         width: 50%;
+        height: 50vh;
         position: relative;
         overflow: hidden;
         display: flex;
-        flex: 1;
         background: #0C0C0E;
         position: relative;
+
+        @media only screen and (max-width: $tablet-h) {
+            width: 100%;
+          }
 
         iframe {
             position: absolute;
