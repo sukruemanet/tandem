@@ -81,6 +81,10 @@ hr {
 
     &.padding {
         padding: 0 10rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 0 2rem;
+        }
     }
 
     .text-large {
@@ -100,8 +104,16 @@ hr {
                 font-size: clamp(12rem, 12vw, 14rem);
             }
 
+            @media only screen and (max-width: $desktop-sm) {
+                font-size: clamp(8rem, 12vw, 10rem);
+            }
+
             @media only screen and (max-width: $tablet-h) {
-                font-size: clamp(5rem, 12vw, 7rem);
+                font-size: clamp(5rem, 12vw, 6rem);
+            }
+
+            @media only screen and (max-width: $tablet-v) {
+                font-size: clamp(5rem, 12vw, 6rem);
             }
         }
     }
@@ -121,6 +133,12 @@ hr {
 
             @media only screen and (max-width: $desktop) {
                 font-size: clamp(6rem, 12vw, 7rem);
+            }
+
+            
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(3rem, 12vw, 4rem);
+                letter-spacing: -1px;
             }
         }
     }
@@ -287,16 +305,40 @@ hr {
         bottom: 0;
         left: 0;
 
+        @media only screen and (max-width: $tablet-h) {
+            padding: 2rem;
+        }
+
         p {
             max-width: 70rem;
             font-size: clamp(3rem, 12vw, 4rem);
             font-weight: 700;
             color: $white;
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(1.8rem, 12vw, 2.8rem);
+            }
         }
     }
 
     .reveal {
         visibility: hidden;
+
+        figure {
+            @media only screen and (max-width: $tablet-h) {
+                height: 90vh;
+            }
+            img {
+                @media only screen and (max-width: $tablet-h) {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                }
+            }
+        }
     } 
 
     &.dark {
@@ -606,10 +648,22 @@ hr {
     display: flex;
     justify-content: space-between;
 
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 6rem 2rem;
+    }
+    
+    @media only screen and (max-width: $tablet-v) {
+       flex-direction: column;
+    }
+
     .caption {
         max-width: 60%;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $tablet-v) {
+            max-width: 100%;
+        }
 
         span {
             font-size: clamp(3.2rem, 12vw, 4rem);
@@ -789,7 +843,10 @@ hr {
     width: 100%;
     height: 90vh;
     padding: 10rem;
-    
+
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 6rem 2rem;
+    }
 
     .item {
         width: 50%;
@@ -830,6 +887,14 @@ hr {
     min-height: 50rem;
     justify-content: space-between;
 
+    @media only screen and (max-width: $desktop-sm) {
+        margin: 10rem 1rem;
+    }
+
+    @media only screen and (max-width: $tablet-v) {
+        flex-direction: column-reverse;
+    }
+
     .caption {
         padding: 10rem;
         width: 50%;
@@ -837,12 +902,24 @@ hr {
         flex-direction: column;
         justify-content: center;
 
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
         span {
             font-size: 4rem;
             font-weight: $font-bold;
             color: $white;
             margin-bottom: 6rem;
             display: flex;
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: 3rem;
+            }
         }
 
         p {
@@ -858,9 +935,17 @@ hr {
     }
     .image {
         width: 40%;
-        height: 80vh;
+        // height: 80vh;
         overflow: hidden;   
         position: relative;
+
+        @media only screen and (max-width: $desktop-sm) {
+            height: auto;
+        }
+
+        @media only screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
     }
 
     figure {
@@ -1386,6 +1471,11 @@ hr {
     gap: 0 !important;
     padding: 10rem;
 
+    
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 6rem 2rem;
+     }
+
     li {
         height: 40rem;
         padding: 6rem;
@@ -1396,8 +1486,19 @@ hr {
         justify-content: center;
         align-items: center;
 
+        @media only screen and (max-width: $desktop) {
+            height: auto;
+         }
+
+
         &:nth-child(even) {
             border: solid $white .1rem;
+        }
+
+        &:nth-child(odd) {
+            @media only screen and (max-width: $desktop-sm) {
+                display: none;
+             }
         }
     }
 }
@@ -1408,12 +1509,26 @@ hr {
     padding-right: 10rem;
     padding-bottom: 10rem;
 
+    @media only screen and (max-width: $desktop-sm) {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        justify-content: flex-start;
+      }
+      
+
     .row {
-        gap: 4rem
+        gap: 4rem;
+        @media only screen and (max-width: $tablet-h) {
+            gap: 2rem;
+          }
     }
 
     .items {
         max-width: 80%;
+
+        @media only screen and (max-width: $desktop-sm) {
+            max-width: 100%;
+          }
 
         .item {
             border: solid $black .1rem;
@@ -1424,6 +1539,10 @@ hr {
                     display: flex;
                     flex-direction: column;
 
+                    @media only screen and (max-width: $desktop) {
+                        padding: 2rem;
+                     }
+
                     span {
                         font-size: 2.4rem;
                         font-weight: $font-medium;
@@ -1431,6 +1550,7 @@ hr {
                     }
 
                     small {
+                        height: 4rem;
                         font-size: 1.6rem;
                         font-weight: $font-medium;
                     }
@@ -1445,22 +1565,50 @@ hr {
 }
 
 .logos {
-    display: flex;
+    grid-template-columns: repeat(10, 1fr);
+    display: grid;
     gap: 4rem;
     padding: 10rem 0;
     max-width: 80%;
     margin: auto;
 
+    @media only screen and (max-width: $desktop-sm) {
+        max-width: 100%;
+        padding: 10rem 2rem;
+        gap: 2rem;
+    }
+
+    
+    @media only screen and (max-width: $tablet-v) {
+        grid-template-columns: repeat(12, 1fr);
+      }
+
     .item {
-        width: 20%;
+        grid-column: span 2;
         height: 30rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border: solid $black .1rem;
 
+        @media only screen and (max-width: $desktop-sm) {
+            height: 20rem;
+          }
+
+          @media only screen and (max-width: $tablet-v) {
+            grid-column: span 3;
+          }
+
+          @media only screen and (max-width: $tablet-v) {
+            grid-column: span 6;
+          }
+
         img {
             width: auto;
+
+            @media only screen and (max-width: $desktop-sm) {
+                width: 10rem;
+              }
         }
     }
 }
