@@ -29,6 +29,7 @@ header {
     display: flex;
     background: url(../../assets/images/main/logo.svg) no-repeat center;
     background-size: 18rem;
+    @include fade-transition;
 
     @media only screen and (max-width: $tablet-h) {
       width: 14rem !important;
@@ -97,7 +98,7 @@ header {
       height: 7rem;
       display: flex;
       background: url(../../assets/images/main/logo.svg) no-repeat center;
-      background-size: 18rem;
+      background-size: 14rem;
 
       @media only screen and (max-width: $tablet-h) {
         width: 14rem;
@@ -114,7 +115,7 @@ header {
       height: 7rem;
       display: flex;
       background: url(../../assets/images/main/logo.svg) no-repeat center;
-      background-size: 18rem;
+      background-size: 14rem;
 
       @media only screen and (max-width: $tablet-h) {
         width: 14rem;
