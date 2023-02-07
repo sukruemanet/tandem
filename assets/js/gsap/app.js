@@ -266,3 +266,19 @@ const button = document.querySelector("#myButton");
       window.location.href = "next-page.html";
     }, 1000);
   });
+
+
+  //menu Js
+  $(function () {
+    $(".menu-open").click(function (event) {
+        event.stopPropagation();
+        $('body').addClass("no-scroll");
+        smoother.paused(true);
+    });
+
+    $(".menu-close").click(function (event) {
+        event.stopPropagation();
+        $('body').removeClass("no-scroll");
+        smoother.paused(false);
+    });
+});
