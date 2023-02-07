@@ -1689,7 +1689,7 @@ hr {
             text-align: center;
             padding: 0 2rem;
 
-            @media only screen and (max-width: $desktop-sm) {
+            @media only screen and (max-width: $desktop) {
                 font-size: clamp(1.8rem, 12vw, 2.2rem);
               }
         }
