@@ -182,6 +182,66 @@ section {
         }
       }
     }
+
+    .faq {
+      padding: 0 2rem;
+
+      small {
+          color: $black;
+      }
+  
+      h6 {
+          color: $black;
+      }
+
+      .link {
+          color: $dark;
+          @include fade-transition;
+
+          svg {
+              margin-left: 3rem;
+              @include fade-transition;
+              fill: $black;
+  
+          }
+      }
+
+      rect {
+        fill: $black;
+      }
+  
+      .faq-content {
+          width: 100%;
+      }
+  
+      .accordion-menu {
+          width: 100%;
+      
+          li {
+              border: solid $black .1rem;
+              li {
+                border: none;
+              }
+          }
+      
+          .dropdownlink {
+              color: $black;
+              padding: 4rem 8rem 4rem 4rem;
+
+              @media only screen and (max-width: $tablet-h) {
+                padding: 4rem 4rem 4rem 2rem;
+            }
+          }
+      }
+      
+      .submenuItems {
+          display: none;
+      
+          p {
+              color: $black;
+          }
+      }
+  }
   }
 
   &.content {
