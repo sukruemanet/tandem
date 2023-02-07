@@ -167,18 +167,6 @@ searchMenu.to(".search-content", {
 });
 
 searchMenu.from(
-  ".searchline",
-  {
-    duration: 1,
-    stagger: {
-      amount: 0.5,
-    },
-    width: "0%",
-  },
-  "-=.2"
-);
-
-searchMenu.from(
   ".search-close",
   {
     opacity: 0,
@@ -196,25 +184,77 @@ function searchClose() {
   smoother.paused(false);
 }
 
-// GSAP fade in efekti
-// var tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
-// tl.from("#fadeBody", {y:-400, opacity: 0,});
-// tl.to("#fadeBody", {delay: .3, duration: 2, opacity: 1, visibility: "visible", y:0,});
+//Menu
+const tl1 = gsap.timeline();
+const categoryMenu = gsap.timeline({
+  paused: "true",
+});
 
-// // Butona tıklama olayı
-// document.getElementById("button").addEventListener("click", function() {
-//   window.location.href = "nextPage.html";
-// });
+categoryMenu.to(".side-menu", 0.20, {
+  autoAlpha: 1,
+  visibility:"visible"
+});
 
-// gsap.to(document.body, { duration: 1, opacity: 1});
-// const button = document.querySelector("#myButton");
+categoryMenu.to(".menu-container", {
+  duration: 1,
+  x: 0,
+  ease:Power3.easeOut,
+});
+categoryMenu.from(
+  ".menu-close",
+  {
+    opacity: 0,
+    // rotate: "180deg",
+  },
+  "-=.2"
+);
+categoryMenu.from(
+  ".line",
+  {
+    duration: 1,
+    stagger: {
+      amount: 0.5,
+    },
+    width: "0%",
+  },
+  "-=.2"
+);
 
-//   button.addEventListener("click", function() {
-//     gsap.to(document.body, {duration: 1, opacity: 0});
-//     setTimeout(() => {
-//       window.location.href = "next-page.html";
-//     }, 1000);
-//   })
+categoryMenu.to(
+  ".search-content",
+  {
+    duration: .5,
+    autoAlpha: 1,
+  },
+  "-=1.3"
+);
+
+categoryMenu.from(
+  ".menu-item-name",
+  {
+    duration: 1,
+    stagger: {
+      amount: 0.5,
+    },
+    y: 100,
+  },
+  "-=1.3"
+);
+function menuOpen() {
+  categoryMenu.play();
+  smoother.paused(true);
+}
+function menuClose() {
+  categoryMenu.reverse();
+  smoother.paused(false);
+}
+
+$(document).keydown(function (e) {
+  if (e.keyCode == 27) {
+    categoryMenu.reverse();
+    smoother.paused(false);
+  }
+});
 
 gsap.to(document.body, {duration: 1, opacity: 1, ease: "power2.inOut"});
 
