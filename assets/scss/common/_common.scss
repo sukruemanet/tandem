@@ -2040,11 +2040,10 @@ hr {
     flex-direction: column;
     padding: 4rem 10rem;
     font-size: 2.2rem;
-    border-bottom: solid $white .1rem;
     color: $white;
 
     @media only screen and (max-width: $desktop-sm) {
-        padding: 4rem 2rem 8rem; 
+        padding: 4rem 2rem 0; 
       }
 
     .head {
