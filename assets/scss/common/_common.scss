@@ -700,13 +700,25 @@ hr {
         justify-content: flex-end;
         padding: 4rem 10rem;
 
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 4rem 2rem;
+        }
+
         .caption {
             max-width: 100%;
             align-items: end;
             margin-top: 6rem;
 
+            @media only screen and (max-width: $desktop-sm) {
+                align-items:flex-start;
+            }
+
             .description {
                 max-width: 60%;
+
+                @media only screen and (max-width: $desktop-sm) {
+                    max-width: 100%;
+                }
 
                 p {
                     margin: 4rem 0;
@@ -737,12 +749,20 @@ hr {
             color: $white;
             font-weight: $font-bold;
             margin-bottom: 6rem;
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(2.6rem, 12vw, 3rem);
+            }
         }
 
         p {
             font-size: clamp(2rem, 12vw, 2.4rem);
             color: $white;
             font-weight: $font-bold;
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: clamp(1.8rem, 12vw, 2rem);
+            }
 
         }
 
@@ -917,18 +937,22 @@ hr {
     height: 90vh;
     padding: 10rem;
 
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 4rem 2rem;
+    }
+
     &.type-02 {
         padding: 4rem 10rem;
         height: auto;
+        
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 4rem 2rem;
+        }
 
         .image {
             padding-bottom: 4rem;
             border-bottom: solid $white .1rem;
         }
-    }
-
-    @media only screen and (max-width: $desktop-sm) {
-        padding: 6rem 2rem;
     }
 
     .item {
@@ -939,6 +963,18 @@ hr {
         height: 90vh;
         position: relative;
         overflow: hidden;
+
+        @media only screen and (max-width: $tablet-h) {
+            height: auto;
+        }
+
+        &.image-cover {
+            img {
+                @media only screen and (max-width: $tablet-h) {
+                    height: auto;
+                }
+            }
+        }
 
         figcaption {
             position: absolute;

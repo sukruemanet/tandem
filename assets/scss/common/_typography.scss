@@ -83,6 +83,10 @@ h5 {
     font-weight: $font-medium;
     line-height: 1;
     color: $white;
+
+    @media only screen and (max-width: $tablet-h) {
+        font-size: clamp(3.4rem, 12vw, 5rem);
+     }
 }
 
 
