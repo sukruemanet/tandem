@@ -75,6 +75,7 @@ hr {
     flex-direction: column;
     overflow: hidden;
 
+
     @media only screen and (max-width: $tablet-h) {
         margin: 4rem 0;
     }
@@ -679,6 +680,10 @@ hr {
         font-weight: $font-bold;
         margin-top: 8rem;
         margin-left: auto;
+
+        &.wf {
+            max-width: 100%;
+        }
 
         @media only screen and (max-width: $desktop-sm) {
             margin-top: 0;
@@ -2027,6 +2032,58 @@ hr {
             -webkit-filter: grayscale(1);
             filter: grayscale(1);
         }
+    }
+}
+
+.content-list {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 10rem;
+    font-size: 2.2rem;
+    border-bottom: solid $white .1rem;
+    color: $white;
+
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 4rem 2rem 8rem; 
+      }
+
+    .head {
+        width: 100%;
+        border-bottom: solid $white .1rem;
+        padding-bottom: 2rem;
+        color: $white;
+        display: flex;
+    }
+
+    ul {
+        color: $white;
+        margin-bottom: 4rem;
+        li {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 0;
+            border-bottom: solid $white .1rem;
+
+            small {
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+                @media only screen and (max-width: $tablet-h) {
+                    font-size: 1.4rem;
+                  }
+            }
+            span {
+                font-size: 4.8rem;
+                font-weight: $font-medium;
+
+                @media only screen and (max-width: $tablet-h) {
+                    font-size: 3.2rem;
+                  }
+            }
+        }
+    }
+
+    .button {
+        margin-top: 4rem;
     }
 }
 
