@@ -77,4 +77,12 @@ h4 {
       }
 }
 
+h5 {
+    font-size: clamp(6rem, 12vw, 8rem);
+    letter-spacing: 0.6291px;
+    font-weight: $font-medium;
+    line-height: 1;
+    color: $white;
+}
+
 

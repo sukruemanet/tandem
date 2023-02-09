@@ -695,6 +695,26 @@ hr {
     display: flex;
     justify-content: space-between;
 
+    &.fd {
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 4rem 10rem;
+
+        .caption {
+            max-width: 100%;
+            align-items: end;
+            margin-top: 6rem;
+
+            .description {
+                max-width: 60%;
+
+                p {
+                    margin: 4rem 0;
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: $desktop-sm) {
         padding: 6rem 2rem;
     }
@@ -897,6 +917,16 @@ hr {
     height: 90vh;
     padding: 10rem;
 
+    &.type-02 {
+        padding: 4rem 10rem;
+        height: auto;
+
+        .image {
+            padding-bottom: 4rem;
+            border-bottom: solid $white .1rem;
+        }
+    }
+
     @media only screen and (max-width: $desktop-sm) {
         padding: 6rem 2rem;
     }
@@ -906,7 +936,7 @@ hr {
     }
 
     figure {
-        max-height: 90vh;
+        height: 90vh;
         position: relative;
         overflow: hidden;
 
