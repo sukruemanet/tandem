@@ -1,4 +1,3 @@
-
 @import "../base/base";
 
 
@@ -20,8 +19,9 @@
 
     small {
         margin: 0;
+
         @media only screen and (max-width: $tablet-h) {
-           text-align: center;
+            text-align: center;
         }
     }
 }
@@ -34,7 +34,7 @@ form {
     @media only screen and (max-width: $tablet-h) {
         margin-top: 4rem;
     }
-    
+
     .form-item {
         display: flex;
         flex-direction: column;
@@ -75,8 +75,8 @@ form {
         }
 
         &:focus {
-        //    background: $white;
-        //     border: solid $white .1rem;
+            //    background: $white;
+            //     border: solid $white .1rem;
         }
 
         &::-webkit-input-placeholder {
@@ -108,6 +108,7 @@ form {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         @media only screen and (max-width: $tablet-v) {
             flex-direction: column;
         }
@@ -124,7 +125,8 @@ form {
 
     .button {
         @media only screen and (max-width: $tablet-v) {
-            width: 100%;;
+            width: 100%;
+            ;
         }
     }
 
@@ -137,12 +139,12 @@ form {
 
         h1 {
             color: $white;
-            
+
             &:before {
                 background: $white;
             }
         }
-    
+
         p {
             color: $white;
         }
@@ -165,11 +167,11 @@ form {
 
     .row {
         width: 100%;
-        gap:4rem;
+        gap: 4rem;
 
         @media only screen and (max-width: $phone) {
             gap: 0;
-          }
+        }
     }
 
     .contact-head {
@@ -260,6 +262,7 @@ form {
             color: $white;
             text-decoration: underline;
             @include fade-transition;
+
             &:hover {
                 color: $white;
             }
@@ -295,7 +298,7 @@ form {
         align-items: center !important;
         font-size: 1.2rem;
         letter-spacing: 2.18182px;
-   
+
         margin: 0 !important;
         font-family: $font-maison;
         padding: 0 6rem 0 2rem;
@@ -307,7 +310,7 @@ form {
         padding: 0 !important;
         height: 100% !important;
         background-color: transparent !important;
-       
+
 
         &:after {
             width: 2rem !important;
@@ -320,62 +323,21 @@ form {
     }
 }
 
-.pagination {
-    display: flex;
-    max-width: 40%;
-    margin: auto;
-    justify-content: space-between;
-    padding: 6rem 0;
-
-    .numbers {
-        display: flex;
-    }
-
-    li {
-        width: 6rem;
-        height: 3.6rem;
-
-        &.prev, &.next {
-            background: #C9FF99;
-            border-radius: 100vmax;
-        }
-
-        &:hover {
-            a {
-            border:solid $dark .14rem;
-            @include fade-transition;
-            }
-        }
-
-        a {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            font-weight: $font-medium;
-            border-radius: 100vmax;
-            border:solid transparent .14rem;
-            @include fade-transition;
-            color:$dark;
-        }
-    }
-}
-
 
 .selectric-wrapper {
 
     &.selectric-open {
         .button {
             &:after {
-                transform:rotate(180deg);
+                transform: rotate(180deg);
             }
         }
+
         .selectric-items {
             top: 6rem !important;
             @include fade-transition;
             opacity: 1 !important;
-            visibility:  visible !important;
+            visibility: visible !important;
             display: flex !important;
         }
     }
@@ -384,13 +346,13 @@ form {
 .selectric-items {
     box-shadow: none !important;
     padding: 1.4rem !important;
-    background:  $white !important;
+    background: $white !important;
     border: .1rem solid rgb(216, 216, 216) !important;
     top: 12rem !important;
     border-radius: 1rem;
     @include fade-transition;
     opacity: 0 !important;
-    visibility:  hidden !important;
+    visibility: hidden !important;
     flex-direction: column;
 
     ul {
@@ -405,7 +367,7 @@ form {
             @include fade-transition;
 
             &:hover {
-             @include fade-transition;
+                @include fade-transition;
             }
 
             &:last-child {
@@ -419,27 +381,28 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+    -moz-appearance: textfield;
+    /* Firefox */
 }
 
 //Tab Menu
 .tabmenu-content {
 
-    .tab-link:hover, li.current {
-       
-      }
+    .tab-link:hover,
+    li.current {}
 
-      .tab-link {
+    .tab-link {
         position: relative;
         font-size: 2.6rem;
         font-weight: $font-medium;
- 
+
         &:before {
-            content:'';
+            content: '';
             position: absolute;
             width: 100%;
             height: .2rem;
@@ -451,9 +414,9 @@ input[type=number] {
             color: $dark;
             background: #C9FF99;
         }
-      }
-      
-      .tabs {
+    }
+
+    .tabs {
         display: flex;
         justify-content: space-between;
         margin: 0;
@@ -462,52 +425,50 @@ input[type=number] {
         padding: 2rem;
         transition: all 0.5s ease-in-out;
         font-family: $font-mono ;
-        
+
         @media only screen and (max-width: $tablet-h) {
             padding: 1rem .5rem;
             text-align: center;
-            }
+        }
 
         li {
-          list-style: none;
-          flex: 1;
-          height: 5.6rem;
-          font-size: 2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-          border-radius: 100vmax !important;
-          cursor: pointer;
+            list-style: none;
+            flex: 1;
+            height: 5.6rem;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 100vmax !important;
+            cursor: pointer;
 
-          @media only screen and (max-width: $tablet-h) {
-            font-size: 1.6rem;
+            @media only screen and (max-width: $tablet-h) {
+                font-size: 1.6rem;
             }
 
             @media only screen and (max-width: $tablet-v) {
                 font-size: 1.2rem;
                 padding: 0 1rem;
-                }
-      
-          &:first-child {
-            border-radius: .5rem 0 0;
-          }
-      
-          &:last-child {
-            border-radius: 0 .5rem 0 0;
-          }
+            }
+
+            &:first-child {
+                border-radius: .5rem 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 .5rem 0 0;
+            }
         }
-      }
-      
-      .tab-link {
+    }
+
+    .tab-link {
         transition: all 0.5s ease-in-out;
-      
-        &:hover {
-          
-        }
-      }
-      
-      .tab-content {
+
+        &:hover {}
+    }
+
+    .tab-content {
         display: none;
         transition-property: transform, opacity;
         transition-duration: 0.4s;
@@ -516,32 +477,32 @@ input[type=number] {
 
         @media only screen and (max-width: $tablet-h) {
             padding: 2rem;
-            }
+        }
 
         &.current {
-          display: flex;
-          animation: fade 0.3s ease-in-out both;
+            display: flex;
+            animation: fade 0.3s ease-in-out both;
         }
-      
-        img {
-          max-width: 100%;
-          border-radius: .5rem;
-        }
-      }
-      
-      @keyframes fade {
-        0% {
-          opacity: 0;
-          transform: translateY(2rem);
-        }
-      
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
 
-      .item {
+        img {
+            max-width: 100%;
+            border-radius: .5rem;
+        }
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .item {
         .caption {
             display: flex;
             justify-content: center;
@@ -550,19 +511,20 @@ input[type=number] {
             height: 100%;
             padding: 4rem 5vw;
             text-align: center;
-            
+
             @media only screen and (max-width: $tablet-h) {
                 padding: 0 0 2rem;
-                }
-        
+            }
+
             span {
                 font-size: clamp(3.2rem, 12vw, 4.4rem);
                 letter-spacing: 0.477248px;
 
                 @media only screen and (max-width: $tablet-v) {
                     font-size: clamp(3rem, 12vw, 3.2rem);
-                    }
+                }
             }
+
             p {
                 font-family: $font-mono;
                 font-size: clamp(1.6rem, 12vw, 2rem);
@@ -571,7 +533,7 @@ input[type=number] {
                 @media only screen and (max-width: $tablet-v) {
                     font-size: clamp(1.4rem, 12vw, 1.6rem);
                     margin: 2.8rem 0;
-                    }
+                }
             }
         }
 
@@ -583,7 +545,7 @@ input[type=number] {
 
             @media only screen and (max-width: $tablet-h) {
                 height: auto;
-                }
+            }
         }
     }
 }
@@ -613,7 +575,7 @@ input[type=number] {
     }
 
     &.center {
-     justify-content: center;
+        justify-content: center;
     }
 
     form {
@@ -646,7 +608,7 @@ input[type=number] {
         form {
             flex-direction: row;
 
-            svg{
+            svg {
                 margin-right: 2rem;
             }
 
@@ -689,73 +651,73 @@ input[type=number] {
     @media only screen and (max-width: $tablet-h) {
         padding: 0 1rem;
     }
-  
-    form {
-      max-width: 70%;
-      width: 100%;
-      height: 9rem;
-      margin: auto;
-      display: flex;
-      border-bottom: solid $white .1rem;
-      flex-direction: row;
 
-      @media only screen and (max-width: $tablet-h) {
-        max-width: 100%;
-        height: 6.4rem;
+    form {
+        max-width: 70%;
+        width: 100%;
+        height: 9rem;
+        margin: auto;
+        display: flex;
+        border-bottom: solid $white .1rem;
+        flex-direction: row;
+
+        @media only screen and (max-width: $tablet-h) {
+            max-width: 100%;
+            height: 6.4rem;
         }
 
         svg {
             margin-right: 1rem;
         }
-      
-      input {
-        border: none;
-        font-size: 3.6rem;
-        font-weight: $font-bold;
 
-        @media only screen and (max-width: $tablet-h) {
-            font-size: 2.6rem;
-            text-align: left;
-            padding-left: 1rem;
-        }
-
-        @media only screen and (max-width: $tablet-v) {
-            font-size: 1.6rem;
-        }
-        
-        &:focus {
+        input {
             border: none;
-          }
- 
-         &::-webkit-input-placeholder {
-             /* Edge */
-             color: $dark;
-         }
- 
-         &:-ms-input-placeholder {
-             /* Internet Explorer 10-11 */
-             color: $dark;
-         }
- 
-         &::placeholder {
-             color: $dark;
-         }
-      }
-  
-      button {
-        width: auto;
-        background: none;
-        padding: 0;
-        margin-right: 1rem;
-        letter-spacing: 0.6291px;
-        
-        svg {
-          width: 4rem;
-          height: 4rem;
+            font-size: 3.6rem;
+            font-weight: $font-bold;
+
+            @media only screen and (max-width: $tablet-h) {
+                font-size: 2.6rem;
+                text-align: left;
+                padding-left: 1rem;
+            }
+
+            @media only screen and (max-width: $tablet-v) {
+                font-size: 1.6rem;
+            }
+
+            &:focus {
+                border: none;
+            }
+
+            &::-webkit-input-placeholder {
+                /* Edge */
+                color: $dark;
+            }
+
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: $dark;
+            }
+
+            &::placeholder {
+                color: $dark;
+            }
         }
-      }
+
+        button {
+            width: auto;
+            background: none;
+            padding: 0;
+            margin-right: 1rem;
+            letter-spacing: 0.6291px;
+
+            svg {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
     }
-}   
+}
 
 .lang-modal {
     position: fixed;
@@ -812,10 +774,12 @@ input[type=number] {
 
                 li {
                     margin: 1rem 0;
+
                     a {
                         font-family: $font-mono;
                         font-size: 1.8rem;
                         color: $dark;
+
                         &:hover {
                             text-decoration: underline;
                         }
@@ -888,9 +852,9 @@ input[type=number] {
                 left: 0;
             }
 
-           
+
         }
-       
+
         .map-close {
             position: absolute;
             top: 2rem;
@@ -905,7 +869,7 @@ input[type=number] {
         }
     }
 }
-  
+
 
 .search-menu {
     position: fixed;
@@ -916,61 +880,159 @@ input[type=number] {
     visibility: hidden;
 
     &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: rgba($black, .40);
-    }
-  
-    .search-content {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 50vh;
-      background-color: $black;
-      z-index: 100;
-      transform: translateY(-100%);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-  
-      @media only screen and (max-width: $tablet-h) {
-        height: 30vh;
-      }
-  
-      .menu-top {
-        width: 100%;
-        height: 11rem;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 4rem;
-  
-        @media only screen and (max-width: $tablet-h) {
-          padding: 0 1rem;
-          height: 8rem;
-        }
-      }
-  
-      .search-close {
-        cursor: pointer;
-        font-weight: $font-medium;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        content: '';
         position: absolute;
-        top: 16rem;
-        right: 4rem;
-  
-        svg {
-          margin-right: .5rem;
-        }
-      }
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($black, .40);
     }
-  }
-  
+
+    .search-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: $black;
+        z-index: 100;
+        transform: translateY(-100%);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        @media only screen and (max-width: $tablet-h) {
+            height: 30vh;
+        }
+
+        .menu-top {
+            width: 100%;
+            height: 11rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 4rem;
+
+            @media only screen and (max-width: $tablet-h) {
+                padding: 0 1rem;
+                height: 8rem;
+            }
+        }
+
+        .search-close {
+            cursor: pointer;
+            font-weight: $font-medium;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 16rem;
+            right: 4rem;
+
+            svg {
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+
+.pagination {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    padding: 5vw 0;
+    align-items: center;
+
+    .link {
+        width: 4rem;
+        height: 4rem;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark;
+        font-size: 2rem;
+        margin: 0 .4rem;
+
+        &:hover {
+            background: #EEEDEE;
+        }
+
+        @media only screen and (max-width: $tablet-h) {
+            font-size: 1.6rem;
+            margin: 0;
+            min-width: 4rem;
+        }
+
+        &.prev,
+        &.next {
+            margin: 0 2rem;
+        }
+
+        span {
+            padding: 0 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            color: $dark;
+
+            svg {
+                fill: $dark;
+
+            }
+        }
+    }
+
+    .page-prev,
+    .page-next {
+        width: 4rem;
+        height: 4rem;
+        @include fade-transition;
+        background: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            .stroke {
+                opacity: 1;
+                fill: $black;
+                stroke: $black;
+                stroke-width: 1.2;
+                enable-background: new;
+
+            }
+
+            .icon {
+                fill: none;
+                stroke: $white;
+            }
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            @include fade-transition;
+
+        }
+
+        .stroke {
+            opacity: 0.5;
+            fill: none;
+            stroke: #0C0C0E;
+            stroke-width: 1.2;
+            enable-background: new;
+            @include fade-transition;
+        }
+
+        .icon {
+            fill: none;
+            stroke: #0C0C0E;
+        }
+    }
+}

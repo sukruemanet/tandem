@@ -1503,6 +1503,7 @@ hr {
 .news-content {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     padding: 10rem 10rem 10rem 40rem;
 
     @media only screen and (max-width: $desktop-sm) {
