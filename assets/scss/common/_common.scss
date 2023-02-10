@@ -75,6 +75,27 @@ hr {
     flex-direction: column;
     overflow: hidden;
 
+    &.fw {
+        padding: 0 !important;
+        align-items: flex-start;
+        margin: 10rem 0 0;
+
+        @media only screen and (max-width: $desktop-sm) {
+            margin: 0;
+        }
+
+        .text-xsmall {
+            max-width: 100%;
+            @media only screen and (max-width: $desktop-sm) {
+                margin-bottom: 4rem;
+            }
+             span {
+                text-align: left;
+                
+             }
+        }
+    }
+
 
     @media only screen and (max-width: $tablet-h) {
         margin: 4rem 0;
@@ -585,6 +606,14 @@ hr {
 .card-caption {
     padding: 10rem 0;
 
+    &.normal {
+        padding: 10rem 10rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            padding: 6rem 2rem;
+        }
+    }
+
     &.padding {
         padding: 10rem 0 0 10rem;
 
@@ -944,6 +973,7 @@ hr {
 
     @media only screen and (max-width: $desktop-sm) {
         padding: 4rem 2rem;
+        height: auto;
     }
 
     &.type-02 {
@@ -1001,6 +1031,14 @@ hr {
         color: $white;
         display: block;
         margin: 6rem 0;
+
+        @media only screen and (max-width: $desktop-sm) {
+            font-size: clamp(3.8rem, 12vw, 5rem);
+        }
+
+        @media only screen and (max-width: $tablet-h) {
+            font-size: clamp(3rem, 12vw, 3.6rem);
+        }
     }
 }
 
