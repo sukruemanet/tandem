@@ -38,6 +38,7 @@ setupSplits();
 
 //Image Reval
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 let revealContainers = document.querySelectorAll(".reveal");
@@ -51,6 +52,7 @@ revealContainers.forEach((imagereval) => {
       toggleActions: "play none none none",
       // markers:true,
       start: "-10% 60%",
+      willChange: "transform",
     }
   });
 
@@ -58,17 +60,19 @@ revealContainers.forEach((imagereval) => {
   tl.from(imagereval, 1.5, {
     xPercent: -100,
     ease: Power4.out,
+    willChange: "transform",
   });
   tl.from(image, 1.5, {
     xPercent: 100,
     scale: 1.8,
     delay: -1.5,
     ease: Power4.out,
-    duration: 0.8
+    duration: 0.8,
+    willChange: "transform",
   });
 });
 
-gsap.to('.start span', { delay:.5, duration: 0.8, y:"0%", stagger: 0.6, })
+gsap.to('.start span', { delay:.5, duration: 0.8, y:"0%", stagger: 0.6, willChange: "transform",})
 
 
 TweenMax.staggerFrom(".start .bottom", 2, {
@@ -76,7 +80,8 @@ TweenMax.staggerFrom(".start .bottom", 2, {
   stagger: 0.6,
   opacity: 0,
   x: -10,
-  ease: Expo.easeInOut
+  ease: Expo.easeInOut,
+  willChange: "transform",
 });
 
 
@@ -85,6 +90,7 @@ TweenMax.staggerFrom(".start-headline .caption", 2, {
   opacity: 0,
   y: 90,
   ease: Power4.out,
+  willChange: "transform",
 });
 
 TweenMax.staggerFrom(".start-headline .info", 2, {
@@ -92,6 +98,7 @@ TweenMax.staggerFrom(".start-headline .info", 2, {
   autoAlpha: 0,
   y: 90,
   ease: Power4.out,
+  willChange: "transform",
 });
 
 TweenMax.staggerFrom(".content-top span", 2, {
@@ -99,6 +106,7 @@ TweenMax.staggerFrom(".content-top span", 2, {
   autoAlpha: 0,
   y: 90,
   ease: Power4.out,
+  willChange: "transform",
 });
 
 TweenMax.staggerFrom(".content-top h2", 2, {
@@ -113,6 +121,7 @@ TweenMax.staggerFrom(".content-top h1", 2, {
   autoAlpha: 0,
   y: 90,
   ease: Power4.out,
+  willChange: "transform",
 });
 
 TweenMax.staggerFrom(".search-info span, .search-info h4, .search-info .search-box", 2, {
@@ -120,6 +129,7 @@ TweenMax.staggerFrom(".search-info span, .search-info h4, .search-info .search-b
   autoAlpha: 0,
   y: 90,
   ease: Power4.out,
+  willChange: "transform",
 });
 
 const fadeInAnimated = gsap.utils.toArray('.fadeslideup');
@@ -129,7 +139,8 @@ fadeInAnimated.forEach((box, i) => {
     trigger: box,
     animation: anim,
     toggleActions: 'play none none none',
-    once: true
+    once: true,
+    willChange: "transform",
   });
 });
 
@@ -146,6 +157,7 @@ ScrollTrigger.create({
     onEnter: () => video.play(),
     onLeave: () => video.pause(),
     onEnterBack: () => video.play(),
+    willChange: "transform",
 });
 
 
