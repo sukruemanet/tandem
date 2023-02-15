@@ -25,10 +25,10 @@ var swiper = new Swiper(".carousel-news-swiper", {
       slidesPerView: 4,
     },
     1920: {
-      slidesPerView: 5,
+      slidesPerView: 4,
     },
     2560: {
-      slidesPerView: 5,
+      slidesPerView: 4,
     },
   }
 });

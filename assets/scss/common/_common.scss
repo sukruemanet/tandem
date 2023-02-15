@@ -369,6 +369,10 @@ hr {
         background: $black;
         padding-top: 19rem;
 
+        @media only screen and (max-width: $desktop-sm) {
+            padding-top: 12rem;
+        }
+
         &.detail {
             height: auto;
 
@@ -390,6 +394,10 @@ hr {
 
                 .content-info {
                     padding: 4rem;
+
+                    @media only screen and (max-width: $tablet-h) {
+                        padding: 2rem;
+                    }
                     .image {
                         width: 100%;
                         height: 70vh;
@@ -487,6 +495,13 @@ hr {
                     text-decoration: underline;
                     color: $white;
 
+                    @media only screen and (max-width: $tablet-h) {
+                        position: relative;
+                        width: 100%;
+                        justify-content: center;
+                        right: 0;
+                    }
+
                     svg {
                         margin-right: 1rem;
                     }
@@ -558,7 +573,6 @@ hr {
 
                 @media only screen and (max-width: $tablet-h) {
                     width: 100%;
-                    margin-top: 4em;
                 }
 
                 img {
@@ -574,6 +588,7 @@ hr {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                padding: 6rem 0;
 
                 .top {
 
@@ -2099,12 +2114,25 @@ hr {
 
     ul {
         color: $white;
-        margin-bottom: 4rem;
+        margin: 4rem 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 6rem;
+
+        @media only screen and (max-width: $tablet-h) {
+            gap: 4rem;
+          }
+
         li {
             display: flex;
             flex-direction: column;
             padding: 3rem 0;
             border-bottom: solid $white .1rem;
+            grid-column: span 6;
+
+            @media only screen and (max-width: $tablet-h) {
+              grid-column: span 12;
+            }
 
             small {
                 font-size: 1.6rem;
@@ -2128,7 +2156,6 @@ hr {
         margin-top: 4rem;
     }
 }
-
 
 .awards {
     padding: 10rem 10rem 6rem;

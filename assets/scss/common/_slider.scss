@@ -170,6 +170,20 @@
 }
 
 .carousel-slider {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 0 5vw;
+    }
+
+    @media only screen and (max-width: $tablet-h) {
+        padding: 0 0 0 2rem;
+    }
 
     .swiper-slide {
         display: flex;
