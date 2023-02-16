@@ -13,3 +13,5 @@ $(document).ready(function () {
         $('#video')[0].pause();
     });
 });
+
+

@@ -313,6 +313,17 @@ hr {
             }
         }
     }
+
+    #video {
+        video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
 }
 
 .start-headline {
@@ -1287,7 +1298,7 @@ hr {
         .dropdownlink {
             cursor: pointer;
             display: flex;
-            font-size: clamp(3rem, 6vw, 3.4rem);
+            font-size: clamp(2rem, 6vw, 3rem);
             color: $white;
             font-weight: $font-medium;
             position: relative;
