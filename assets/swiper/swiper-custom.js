@@ -2,7 +2,7 @@
 
 //Carousel News
 var swiper = new Swiper(".carousel-news-swiper", {
-  spaceBetween: 0,
+  spaceBetween: 40,
   slidesPerView: 5,
   navigation: {
     nextEl: ".swiper-button-next",
