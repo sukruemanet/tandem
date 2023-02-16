@@ -78,7 +78,7 @@ hr {
     &.fw {
         padding: 0 !important;
         align-items: flex-start;
-        margin: 10rem 0 0;
+        margin: 0;
 
         @media only screen and (max-width: $desktop-sm) {
             margin: 0;
@@ -123,7 +123,7 @@ hr {
             line-height: 1;
 
             @media only screen and (max-width: $desktop) {
-                font-size: clamp(12rem, 12vw, 14rem);
+                font-size: clamp(8rem, 12vw, 11rem);
             }
 
             @media only screen and (max-width: $desktop-sm) {
@@ -380,10 +380,10 @@ hr {
                 .content-top {
                     flex-direction: column;
                     height: auto;
-                    padding: 6rem 0;
+                    padding: 6rem 2rem;
 
                     @media only screen and (max-width: $desktop-sm) {
-                        padding: 4rem 0;
+                        padding: 4rem 1.6rem;
                     }
     
                     span {
@@ -663,7 +663,7 @@ hr {
             }
 
             &:first-child {
-                padding-right: 10vw;
+                // padding-right: 10vw;
 
                 @media only screen and (max-width: $desktop-sm) {
                     padding-right: 6rem;
@@ -675,12 +675,18 @@ hr {
                 }
             }
 
+            p {
+                max-width: 80%;
+                margin-left: 0;
+            }
+
             span {
                 font-size: clamp(5rem, 12vw, 7rem);
                 font-weight: $font-medium;
                 color: $white;
                 line-height: 1.1;
                 display: flex;
+                max-width: 80%;
     
                 @media only screen and (max-width: $desktop) {
                     font-size: clamp(3.2rem, 12vw, 4rem);
@@ -722,6 +728,7 @@ hr {
         font-size: clamp(1.8rem, 12vw, 2.2rem);
         color: $white;
         margin-top: 8rem;
+        margin-bottom: 4rem;
         margin-left: auto;
 
         &.wf {
@@ -739,7 +746,7 @@ hr {
 }
 
 .text-card {
-    padding: 0 10rem 10rem;
+    padding: 10rem 10rem 10rem;
     display: flex;
     justify-content: space-between;
 
@@ -808,7 +815,7 @@ hr {
         }
 
         p {
-            font-size: clamp(2rem, 12vw, 2.4rem);
+            font-size: clamp(2rem, 12vw, 2.2rem);
             color: $white;
             font-weight: $font-medium;
 
@@ -1095,7 +1102,15 @@ hr {
             font-weight: $font-bold;
             color: $white;
             margin-bottom: 6rem;
-            display: flex;
+            display: block;
+
+            a {
+                color: $white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
 
             @media only screen and (max-width: $tablet-h) {
                 font-size: 3rem;
@@ -1105,7 +1120,8 @@ hr {
         p {
             max-width: 50rem;
             font-size: 1.8rem;
-            font-weight: $font-medium;
+            line-height: 1.4;
+            font-weight: $font-normal;
             color: $white;
         }
 
@@ -1636,6 +1652,12 @@ hr {
                      }
                 }
 
+                .writer {
+                    font-size: 1.6rem;
+                    color: $black;
+                    margin-bottom: 2rem;
+                }
+                
                 .view {
                     display: flex;
                     font-size: 1.8rem;
@@ -2240,7 +2262,7 @@ hr {
             }
 
             p {
-                font-size: 2rem;
+                font-size: 1.6rem;
                 font-weight: $font-medium;
 
                 @media only screen and (max-width: $tablet-h) {
