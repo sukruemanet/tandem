@@ -193,41 +193,6 @@ hr {
     }
 }
 
-.video {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    
-    @media only screen and (max-width: $tablet-h) {
-        height: 50vh;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba($black, .40);
-        z-index: 1;
-    }
-
-    video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        padding: 10rem;
-
-        @media only screen and (max-width: $tablet-h) {
-            padding: 0 2rem;
-        }
-    }
-}
-
 .start {
     width: 100%;
     height: 100vh;
