@@ -662,6 +662,10 @@ hr {
             p {
                 max-width: 80%;
                 margin-left: 0;
+
+                @media only screen and (max-width: $tablet-h) {
+                    max-width: 100%;
+                }
             }
 
             span {
@@ -673,7 +677,16 @@ hr {
                 max-width: 80%;
     
                 @media only screen and (max-width: $desktop) {
-                    font-size: clamp(3.2rem, 12vw, 4rem);
+                    font-size: clamp(3.2rem, 12vw, 3.4rem);
+                }
+
+                @media only screen and (max-width: $desktop-sm) {
+                    margin-bottom: 2rem;
+                    max-width: 90%;
+                }
+
+                @media only screen and (max-width: $tablet-h) {
+                    max-width: 100%;
                 }
             }
 

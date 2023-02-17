@@ -58,6 +58,11 @@ header {
           font-weight: $font-medium;
           color: $white;
           margin-right: 5rem;
+
+          @media only screen and (max-width: $desktop-sm) {
+            font-size: clamp(1.6rem, 12vw, 1.8rem);
+            margin-right: 3rem;
+        }
         }
       }
     }
