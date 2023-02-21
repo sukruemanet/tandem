@@ -34,3 +34,13 @@ textItems.forEach((scopedText) => {
         smoother.effects(char, { speed: 1, lag: (i + 1) * 0.05 });
     });
 })
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.utils.toArray("a").forEach(function (button, i) {
+  button.addEventListener("click", (e) => {
+    var id = e.target.getAttribute("href");
+    console.log(id);
+    smoother.scrollTo(id, true, "top top");
+    e.preventDefault();
+  });
+});

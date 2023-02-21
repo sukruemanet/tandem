@@ -313,6 +313,8 @@ hr {
         width: 100%;
         bottom: 0;
         left: 0;
+        display: flex;
+        align-items: flex-start;
 
         @media only screen and (max-width: $tablet-h) {
             padding: 2rem;
@@ -326,6 +328,41 @@ hr {
 
             @media only screen and (max-width: $tablet-h) {
                 font-size: clamp(1.8rem, 12vw, 2.8rem);
+            }
+        }
+    }
+
+    ul {
+        max-width: 40rem;
+        width: 100%;
+        margin-left: auto;
+        background: rgba($black, .40);
+        padding: 2rem;
+        border-radius: 1rem;
+
+        @media only screen and (max-width: $tablet-h) {
+            display: none;
+        }
+
+        li {
+            border-bottom: solid rgba($white, .20) .1rem;
+
+            &:last-child {
+                border: none;
+            }
+            
+            a {
+                width: 100%;
+                font-size: 1.6rem;
+                color: $white;
+                line-height: 5rem;
+                display: flex;
+                @include fade-transition;
+                &:hover {
+                    opacity: .5;
+                @include fade-transition;
+
+                }
             }
         }
     }
@@ -1688,14 +1725,27 @@ hr {
         height: 40rem;
         padding: 6rem;
         font-size: 2.4rem;
+        line-height: 1.4;
         color: $white;
-        font-weight: $font-bold;
+        font-weight: $font-medium;
         display: flex;
         justify-content: center;
         align-items: center;
 
         @media only screen and (max-width: $desktop) {
             height: auto;
+         }
+
+         @media only screen and (max-width: $tablet-v) {
+           font-size: 1.8rem;
+           padding: 4rem 2rem;
+         }
+
+         &:nth-child(4) {
+            @media only screen and (max-width: $tablet-v) {
+                border-top: none !important;
+                border-bottom: none !important;
+              }
          }
 
 

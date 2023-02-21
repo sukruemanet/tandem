@@ -264,6 +264,7 @@ function menuClose() {
 $(document).keydown(function (e) {
   if (e.keyCode == 27) {
     categoryMenu.reverse();
+    searchMenu.reverse();
     smoother.paused(false);
   }
 });
