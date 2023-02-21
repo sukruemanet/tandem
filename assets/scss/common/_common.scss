@@ -1441,7 +1441,7 @@ hr {
     .bottom {
         position: absolute;
         width: 100%;
-        bottom: -10rem;
+        bottom: 0;
         left: 0;
         padding: 10rem 10rem 0;
         justify-content: flex-end;
@@ -1450,15 +1450,9 @@ hr {
         flex-direction: column;
 
         @media only screen and (max-width: $desktop-sm) {
-            bottom: -6rem;
             padding: 2rem;
         }
-
-        @media only screen and (max-width: $tablet-v) {
-            bottom: -4rem;
-        }
-        
-
+      
         h5 {
             font-size: clamp(30rem, 12vw, 40rem);
             font-weight: $font-bold;
