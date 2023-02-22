@@ -36,7 +36,7 @@ textItems.forEach((scopedText) => {
 })
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-gsap.utils.toArray("a").forEach(function (button, i) {
+gsap.utils.toArray(".start-headline ul li a").forEach(function (button, i) {
   button.addEventListener("click", (e) => {
     var id = e.target.getAttribute("href");
     console.log(id);

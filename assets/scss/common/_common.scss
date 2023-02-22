@@ -670,19 +670,39 @@ hr {
         flex-direction: row-reverse;
         padding: 10rem 10rem 0 0;
 
-        .small-head {
-            padding-left: 50%;
+        @media only screen and (max-width: $tablet-h) {
+            padding: 6rem 2rem;
         }
 
         .items {
             flex-direction: row-reverse;
+
+            @media only screen and (max-width: $tablet-h) {
+                flex-direction: column-reverse;
+            }
 
             span {
                 text-align: left;
             }
 
             .item {
-                align-items: flex-start;
+                align-items: flex-end;
+                
+                &:first-child {
+                    div {
+                        max-width: 80%;
+                        display: flex;
+                        flex-direction: column;
+
+                        @media only screen and (max-width: $tablet-h) {
+                            max-width: 100%;
+                        }
+
+                        span, ul {
+                            max-width: 100%;
+                        }
+                    }
+                }
             }
 
             ul {
@@ -905,7 +925,10 @@ hr {
             @media only screen and (max-width: $tablet-h) {
                 font-size: clamp(1.8rem, 12vw, 2rem);
             }
+        }
 
+        figure {
+            margin-top: 6rem;
         }
 
         .list {
@@ -1651,6 +1674,7 @@ hr {
     .row {
         width: 100%;
         gap: 6rem;
+        align-items: normal;
 
         @media only screen and (max-width: $desktop-sm) {
             gap: 2rem;
@@ -1659,13 +1683,22 @@ hr {
 
     .cards {
 
+        figure {
+            aspect-ratio: 16/9;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
         .item {
             margin-bottom: 4rem;
             min-height: auto;
             padding-bottom: 0;
             @include fade-transition;
             border-bottom: solid $black .1rem;
-
+            display: flex;
+            flex-direction: column;
+            
             &:hover {
                 @include fade-transition;
                 border-bottom: solid #31A09B .1rem;
