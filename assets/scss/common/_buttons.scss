@@ -59,6 +59,18 @@
 
     &.normal {
         border: solid transparent .1rem;
+        
+        &.dark {
+            background: $dark;
+            color: $white;
+
+            svg {
+                fill: $white;
+                margin-right: 1rem;
+                @include fade-transition;
+            }
+        }
+
         &.dark {
             background: $dark;
             color: $white;

@@ -70,10 +70,19 @@ hr {
     width: 100%;
     text-align: center;
     margin: 10rem 0;
+    padding: 0 20rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
+
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 0 10rem;
+    }
+
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 0 5rem;
+    }
 
     &.fw {
         padding: 0 !important;
@@ -338,7 +347,6 @@ hr {
         margin-left: auto;
         background: rgba($black, .40);
         padding: 2rem;
-        border-radius: 1rem;
 
         @media only screen and (max-width: $tablet-h) {
             display: none;
@@ -658,6 +666,39 @@ hr {
         }
     }
 
+    &.reverse {
+        flex-direction: row-reverse;
+        padding: 10rem 10rem 0 0;
+
+        .small-head {
+            padding-left: 50%;
+        }
+
+        .items {
+            flex-direction: row-reverse;
+
+            span {
+                text-align: left;
+            }
+
+            .item {
+                align-items: flex-start;
+            }
+
+            ul {
+                width: 100%;
+                li {
+                    justify-content: flex-start;
+      
+
+                    span {
+                  
+                    }
+                }
+            }
+        }
+    }
+
     .items {
         display: flex;
 
@@ -939,14 +980,10 @@ hr {
         li {
             border: solid $white .1rem;
             display: flex;
-            font-size: clamp(3rem, 12vw, 3.6rem);
+            font-size: clamp(2rem, 12vw, 2.4rem);
             font-weight: $font-medium;
             padding: 5rem;
             margin-bottom: 4rem;
-
-            @media only screen and (max-width: $desktop-sm) {
-                font-size: clamp(2rem, 12vw, 2.6rem);
-            }
 
             @media only screen and (max-width: $tablet-h) {
                 font-size: clamp(1.8rem, 12vw, 2.4rem);
@@ -1404,7 +1441,7 @@ hr {
 
     .caption {
         position: absolute;
-        width: 60rem;
+        max-width: 50%;
         top: 0;
         left: 0;
         padding: 10rem;
@@ -1431,6 +1468,30 @@ hr {
         }
     }
     
+
+    span {
+        display: block;
+        font-size: clamp(3.2rem, 12vw, 4rem);
+        letter-spacing: 0.6291px;
+        font-weight: $font-medium;
+        line-height: 1.2;
+        color: $white;
+        margin-top: 4rem;
+
+        @media only screen and (max-width: $desktop) {
+            font-size: clamp(3rem, 12vw, 3.4rem);
+        }
+
+        @media only screen and (max-width: $desktop-sm) {
+            font-size: clamp(2rem, 12vw, 2.2rem);
+        }
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
     svg {
         width: 4rem;
         height: 4rem;
@@ -1474,28 +1535,12 @@ hr {
             }
         }
 
-        span {
+        p {
             max-width: 110rem;
-            display: block;
-            font-size: clamp(3.2rem, 12vw, 4rem);
-            letter-spacing: 0.6291px;
-            font-weight: $font-medium;
-            line-height: 1.2;
-            color: $white;
-    
-            @media only screen and (max-width: $desktop) {
-                font-size: clamp(3rem, 12vw, 3.4rem);
-            }
-    
-            @media only screen and (max-width: $desktop-sm) {
-                font-size: clamp(2rem, 12vw, 2.2rem);
-            }
-    
-            a {
-                color: $white;
-                text-decoration: underline;
-            }
+            margin-bottom: 4rem;
         }
+
+        
     }
 }
 
@@ -1707,52 +1752,62 @@ hr {
 }
 
 .triple-square {
-    gap: 0 !important;
     padding: 10rem;
 
-    
     @media only screen and (max-width: $desktop-sm) {
         padding: 6rem 2rem;
      }
 
-    li {
-        height: 40rem;
-        padding: 6rem;
-        font-size: 2.4rem;
-        line-height: 1.4;
-        color: $white;
-        font-weight: $font-medium;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+     ul {
+        gap: 0 !important;
 
-        @media only screen and (max-width: $desktop) {
-            height: auto;
-         }
-
-         @media only screen and (max-width: $tablet-v) {
-           font-size: 1.8rem;
-           padding: 4rem 2rem;
-         }
-
-         &:nth-child(4) {
-            @media only screen and (max-width: $tablet-v) {
-                border-top: none !important;
-                border-bottom: none !important;
-              }
-         }
-
-
-        &:nth-child(even) {
-            border: solid $white .1rem;
-        }
-
-        &:nth-child(odd) {
-            @media only screen and (max-width: $desktop-sm) {
-                display: none;
+        li {
+            height: 40rem;
+            padding: 6rem;
+            font-size: 2rem;
+            line-height: 1.4;
+            color: $white;
+            font-weight: $font-medium;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
+    
+            small {
+                font-size: 1.6rem;
+                color: $white;
+                margin-bottom: 1rem;
+            }
+    
+            @media only screen and (max-width: $desktop) {
+                height: auto;
              }
+    
+             @media only screen and (max-width: $tablet-v) {
+               font-size: 1.8rem;
+               padding: 4rem 2rem;
+             }
+    
+             &:nth-child(4) {
+                @media only screen and (max-width: $tablet-v) {
+                    border-top: none !important;
+                    border-bottom: none !important;
+                  }
+             }
+    
+    
+            &:nth-child(even) {
+                border: solid $white .1rem;
+            }
+    
+            &:nth-child(odd) {
+                @media only screen and (max-width: $desktop-sm) {
+                    display: none;
+                 }
+            }
         }
-    }
+     }
 }
 
 .team-content {
@@ -2148,7 +2203,7 @@ hr {
 .content-list {
     display: flex;
     flex-direction: column;
-    padding: 4rem 10rem;
+    padding: 8rem 10rem;
     font-size: 2.2rem;
     color: $white;
 
@@ -2173,6 +2228,10 @@ hr {
 
         @media only screen and (max-width: $tablet-h) {
             gap: 4rem;
+          }
+
+          strong {
+            margin-bottom: 2rem;
           }
 
         li {
