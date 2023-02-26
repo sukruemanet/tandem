@@ -16,9 +16,35 @@ mm.add("(min-width: 1024px)", () => {
     ignoreMobileResize: true,
     effects: true,
   });
-  
+
+
   return () => smoother.kill();
+  
 });
+
+gsap.utils.toArray(".start-headline ul li a").forEach(function (button, i) {
+  button.addEventListener("click", (e) => {
+    var id = e.target.getAttribute("href");
+    console.log(id);
+    smoother.scrollTo(id, true, "top top");
+    e.preventDefault();
+  });
+});
+  
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+let bodyScrollBar = Scrollbar.init(document.body, { damping: 0.1, delegateTo: document });
+ScrollTrigger.scrollerProxy(".scroller", {
+  scrollTop(value) {
+    if (arguments.length) {
+      bodyScrollBar.scrollTop = value;
+    }
+    return bodyScrollBar.scrollTop;
+  }
+});
+bodyScrollBar.addListener(ScrollTrigger.update);
 
 
 smoother.effects(".image_cont img", { speed: "auto" });
@@ -35,12 +61,3 @@ textItems.forEach((scopedText) => {
     });
 })
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-gsap.utils.toArray(".start-headline ul li a").forEach(function (button, i) {
-  button.addEventListener("click", (e) => {
-    var id = e.target.getAttribute("href");
-    console.log(id);
-    smoother.scrollTo(id, true, "top top");
-    e.preventDefault();
-  });
-});

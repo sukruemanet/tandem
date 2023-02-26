@@ -81,7 +81,7 @@ hr {
     }
 
     @media only screen and (max-width: $desktop-sm) {
-        padding: 0 5rem;
+        padding: 0 2rem;
     }
 
     &.fw {
@@ -709,11 +709,6 @@ hr {
                 width: 100%;
                 li {
                     justify-content: flex-start;
-      
-
-                    span {
-                  
-                    }
                 }
             }
         }
@@ -785,6 +780,7 @@ hr {
 
                 @media only screen and (max-width: $tablet-h) {
                     max-width: 100%;
+                    margin: 4rem 0;
                 }
             }
 
@@ -1215,7 +1211,7 @@ hr {
             }
 
             @media only screen and (max-width: $tablet-h) {
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }
 
@@ -1471,7 +1467,7 @@ hr {
 
         @media only screen and (max-width: $desktop-sm) {
             padding: 6rem 2rem;
-            width: 100%;
+            max-width: 100%;
         }
     }
 
@@ -2362,6 +2358,10 @@ hr {
         display: grid;
         gap: 4rem;
         margin-top: 6rem;
+
+        @media only screen and (max-width: $desktop-sm) {
+            gap: 2rem;
+          }
 
         li {
             grid-column: span 6;
