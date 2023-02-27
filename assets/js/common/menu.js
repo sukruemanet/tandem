@@ -11,6 +11,10 @@ $(function () {
         $('body').removeClass("no-scroll");
         smoother.paused(false);
     });
+
+    $(".cookies-close").click(function (event) {
+        $('.cookies-bar').removeClass("visible");
+    });
 });
 
 

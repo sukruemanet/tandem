@@ -2564,3 +2564,66 @@ hr {
     }
    }
 }
+
+.cookies-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 6rem;
+    background: $black;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    @include fade-transition;
+
+    @media only screen and (max-width: $desktop-sm) {
+        padding: 2rem;
+      }
+
+      @media only screen and (max-width: $tablet-v) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        @include fade-transition;
+    }
+
+    span {
+        max-width: 60%;
+        font-size: 2rem;
+        color: $white;
+
+        @media only screen and (max-width: $desktop-sm) {
+            font-size: 1.6rem;
+          }
+
+          @media only screen and (max-width: $tablet-v) {
+            max-width: 100%;
+            margin-bottom: 2rem;
+          }
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
+    .button {
+        svg {
+            width: 2.4rem;
+            height:2.4rem;
+            fill: $white;
+            margin-right: 1rem;
+        }
+        @media only screen and (max-width: $tablet-v) {
+            width: 100%;
+          }
+    }
+}
