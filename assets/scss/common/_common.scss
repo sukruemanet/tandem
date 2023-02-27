@@ -208,10 +208,6 @@ hr {
     position: relative;
     overflow: hidden;
 
-    @media only screen and (max-width: $tablet-v) {
-        height: 100dvh;
-    }
-
     figure {
         display: flex;
         align-items: flex-end;
