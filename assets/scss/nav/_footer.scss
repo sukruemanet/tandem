@@ -4,7 +4,6 @@
 footer {
     padding-bottom: 4rem;
     .items {
-
         display: flex;
         border-top:solid $white .1rem;
         border-bottom:solid $white .1rem;
@@ -24,15 +23,11 @@ footer {
                  }
 
             &:first-child {
+
                 @media only screen and (max-width: $tablet-h) {
                     justify-content: flex-start;
                     align-items: flex-start;         
-                     }
-            }
-
-            &:last-child {
-                justify-content: flex-start;
-                align-items: flex-start;  
+                }
             }
 
             &:nth-child(2) {
@@ -42,6 +37,11 @@ footer {
                 @media only screen and (max-width: $tablet-v) {
                     border: none;
                 }
+            }
+
+            &:last-child {
+                justify-content: flex-start;
+                align-items: flex-start;  
             }
 
             .logo {

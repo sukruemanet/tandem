@@ -1442,6 +1442,11 @@ hr {
             font-weight: $font-normal;
             line-height: 2.2rem;
             margin-right: 1.4rem;
+
+            a {
+                color: $white;
+                text-decoration: underline;
+            }
     
             @media only screen and (max-width: $tablet-h) {
                 font-size: clamp(1.4rem, 6vw, 1.6rem);
